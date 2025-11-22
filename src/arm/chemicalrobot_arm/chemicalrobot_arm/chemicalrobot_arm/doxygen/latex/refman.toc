@@ -1,0 +1,77 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {section}{\numberline {1}类索引}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}类列表}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}类说明}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}dashboardsrv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}client类 参考}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}成员函数说明}{2}{subsubsection.2.1.1}%
+\contentsline {paragraph}{\numberline {2.1.1.1}close()}{2}{paragraph.2.1.1.1}%
+\contentsline {paragraph}{\numberline {2.1.1.2}DO\_init()}{3}{paragraph.2.1.1.2}%
+\contentsline {paragraph}{\numberline {2.1.1.3}grasp()}{3}{paragraph.2.1.1.3}%
+\contentsline {paragraph}{\numberline {2.1.1.4}load\_program()}{3}{paragraph.2.1.1.4}%
+\contentsline {paragraph}{\numberline {2.1.1.5}loose()}{3}{paragraph.2.1.1.5}%
+\contentsline {paragraph}{\numberline {2.1.1.6}open()}{3}{paragraph.2.1.1.6}%
+\contentsline {paragraph}{\numberline {2.1.1.7}play()}{4}{paragraph.2.1.1.7}%
+\contentsline {paragraph}{\numberline {2.1.1.8}reset()}{4}{paragraph.2.1.1.8}%
+\contentsline {paragraph}{\numberline {2.1.1.9}RG2\_is\_busy()}{4}{paragraph.2.1.1.9}%
+\contentsline {paragraph}{\numberline {2.1.1.10}RG2\_is\_grip()}{4}{paragraph.2.1.1.10}%
+\contentsline {paragraph}{\numberline {2.1.1.11}RG2grip()}{4}{paragraph.2.1.1.11}%
+\contentsline {paragraph}{\numberline {2.1.1.12}RG2release()}{4}{paragraph.2.1.1.12}%
+\contentsline {paragraph}{\numberline {2.1.1.13}robot\_init()}{4}{paragraph.2.1.1.13}%
+\contentsline {paragraph}{\numberline {2.1.1.14}setDO()}{4}{paragraph.2.1.1.14}%
+\contentsline {paragraph}{\numberline {2.1.1.15}stop()}{5}{paragraph.2.1.1.15}%
+\contentsline {paragraph}{\numberline {2.1.1.16}unlockPS()}{5}{paragraph.2.1.1.16}%
+\contentsline {subsection}{\numberline {2.2}F710类 参考}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}详细描述}{6}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}类成员变量说明}{6}{subsubsection.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.1}button\_l}{6}{paragraph.2.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.2.2}x}{6}{paragraph.2.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}hole\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cls类 参考}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}详细描述}{6}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception类 参考}{7}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}详细描述}{7}{subsubsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.5}ur5e\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}action类 参考}{7}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}详细描述}{9}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}成员函数说明}{9}{subsubsection.2.5.2}%
+\contentsline {paragraph}{\numberline {2.5.2.1}CalculatePoses()}{9}{paragraph.2.5.2.1}%
+\contentsline {paragraph}{\numberline {2.5.2.2}CommandExecute()}{10}{paragraph.2.5.2.2}%
+\contentsline {paragraph}{\numberline {2.5.2.3}ConstructSeqReq()}{10}{paragraph.2.5.2.3}%
+\contentsline {paragraph}{\numberline {2.5.2.4}ForceFeedback()}{11}{paragraph.2.5.2.4}%
+\contentsline {paragraph}{\numberline {2.5.2.5}GetBlendradius()}{11}{paragraph.2.5.2.5}%
+\contentsline {paragraph}{\numberline {2.5.2.6}GetJoints()}{11}{paragraph.2.5.2.6}%
+\contentsline {paragraph}{\numberline {2.5.2.7}GetNextpose()}{12}{paragraph.2.5.2.7}%
+\contentsline {paragraph}{\numberline {2.5.2.8}GoMode()}{12}{paragraph.2.5.2.8}%
+\contentsline {paragraph}{\numberline {2.5.2.9}GotoDefaultPose()}{12}{paragraph.2.5.2.9}%
+\contentsline {paragraph}{\numberline {2.5.2.10}Gripper\_op()}{12}{paragraph.2.5.2.10}%
+\contentsline {paragraph}{\numberline {2.5.2.11}Init()}{13}{paragraph.2.5.2.11}%
+\contentsline {paragraph}{\numberline {2.5.2.12}InsertPoses()}{13}{paragraph.2.5.2.12}%
+\contentsline {paragraph}{\numberline {2.5.2.13}JsonPub()}{13}{paragraph.2.5.2.13}%
+\contentsline {paragraph}{\numberline {2.5.2.14}LoadStationInfo()}{14}{paragraph.2.5.2.14}%
+\contentsline {paragraph}{\numberline {2.5.2.15}MoveCircle\_pilz()}{14}{paragraph.2.5.2.15}%
+\contentsline {paragraph}{\numberline {2.5.2.16}MoveLine\_pilz()}{14}{paragraph.2.5.2.16}%
+\contentsline {paragraph}{\numberline {2.5.2.17}RecordCurrSequence()}{15}{paragraph.2.5.2.17}%
+\contentsline {paragraph}{\numberline {2.5.2.18}RecordSequence()}{15}{paragraph.2.5.2.18}%
+\contentsline {paragraph}{\numberline {2.5.2.19}ResetArm()}{15}{paragraph.2.5.2.19}%
+\contentsline {paragraph}{\numberline {2.5.2.20}SaveMode()}{15}{paragraph.2.5.2.20}%
+\contentsline {paragraph}{\numberline {2.5.2.21}SaveStationInfo()}{16}{paragraph.2.5.2.21}%
+\contentsline {paragraph}{\numberline {2.5.2.22}SaveStationJoint()}{16}{paragraph.2.5.2.22}%
+\contentsline {paragraph}{\numberline {2.5.2.23}SaveStationPose()}{16}{paragraph.2.5.2.23}%
+\contentsline {paragraph}{\numberline {2.5.2.24}SequenceMove\_pilz()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{paragraph.2.5.2.24}%
+\contentsline {paragraph}{\numberline {2.5.2.25}SequenceMove\_pilz()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{paragraph.2.5.2.25}%
+\contentsline {paragraph}{\numberline {2.5.2.26}SequenceValidate\_pilz()}{17}{paragraph.2.5.2.26}%
+\contentsline {paragraph}{\numberline {2.5.2.27}setAvgCartesianSpeed()}{18}{paragraph.2.5.2.27}%
+\contentsline {paragraph}{\numberline {2.5.2.28}SwitchMode()}{18}{paragraph.2.5.2.28}%
+\contentsline {paragraph}{\numberline {2.5.2.29}ValidateOneReq()}{18}{paragraph.2.5.2.29}%
+\contentsline {subsubsection}{\numberline {2.5.3}类成员变量说明}{19}{subsubsection.2.5.3}%
+\contentsline {paragraph}{\numberline {2.5.3.1}\_CTF\_pose}{19}{paragraph.2.5.3.1}%
+\contentsline {paragraph}{\numberline {2.5.3.2}\_curr\_station}{19}{paragraph.2.5.3.2}%
+\contentsline {paragraph}{\numberline {2.5.3.3}\_dbptr}{19}{paragraph.2.5.3.3}%
+\contentsline {paragraph}{\numberline {2.5.3.4}\_file\_root}{19}{paragraph.2.5.3.4}%
+\contentsline {paragraph}{\numberline {2.5.3.5}\_mgptr}{20}{paragraph.2.5.3.5}%
+\contentsline {subsection}{\numberline {2.6}ur5e\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}js类 参考}{20}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}详细描述}{20}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}构造及析构函数说明}{20}{subsubsection.2.6.2}%
+\contentsline {paragraph}{\numberline {2.6.2.1}ur5e\_js()}{20}{paragraph.2.6.2.1}%
+\contentsline {paragraph}{\numberline {2.6.2.2}$\sim $ur5e\_js()}{20}{paragraph.2.6.2.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}成员函数说明}{21}{subsubsection.2.6.3}%
+\contentsline {paragraph}{\numberline {2.6.3.1}run()}{21}{paragraph.2.6.3.1}%
+\contentsline {section}{Index}{23}{section*.10}%

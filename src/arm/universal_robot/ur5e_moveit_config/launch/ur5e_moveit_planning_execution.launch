@@ -1,0 +1,21 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find ur5e_moveit_config)/config/rosconsole.config"/>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] : ${message}"/>
+  <arg name="sim" default="false" />
+  <arg name="debug" default="false" />
+  <!-- <arg name="pipeline" default="ompl" /> -->
+  <arg name="pipeline" default="pilz_industrial_motion_planner" />
+  
+  <!-- Remap follow_joint_trajectory -->
+  <remap if="$(arg sim)" from="/scaled_pos_joint_traj_controller/follow_joint_trajectory" to="/pos_joint_traj_controller/follow_joint_trajectory"/>
+
+  <!-- Launch moveit -->
+  <include file="$(find ur5e_moveit_config)/launch/move_group.launch">
+    <arg name="debug" default="$(arg debug)" />
+    <arg name="pipeline" default="$(arg pipeline)" />
+  </include>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="calibrate_link_broadcaster" 
+    args="-0.0392746604112 -0.0699258420219 0.0688081292348 0.000706811771998 0.015168291687 0.0095190307631 0.999839392802 tool0 camera_link"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="camera_link_broadcaster" 
+    args="0.00 0.015 0.00 0.013 -0.004 0.005 camera_link camera_color_frame"/>
+</launch>

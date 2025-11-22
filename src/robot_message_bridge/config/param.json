@@ -1,0 +1,13 @@
+{
+  "dms_url": "http://192.168.90.114:8018/worker/robot/heartbeat",
+  "response_url": "http://192.168.90.114:8018/worker/instruction/callback",
+  "identifyingCode":"hik_robot_32b4daa6-5f38-4b5a-bff3-074ccd61ad51",
+  "robotCode": "hik_robot_11337",
+  "operate_code_id": "123",
+  "AGV_name": "11337",
+  "AGV_url": "http://192.168.200.157:8182/rcms/services/rest/hikRpcService/",
+  "AGV_url2": "http://192.168.200.157:8182/rcms-dps/rest/",
+  "Uncharge_Park": "CHARGE1",
+  "map":"RJ",
+  "taskTyp":"ZKD"
+}

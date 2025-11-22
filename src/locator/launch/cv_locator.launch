@@ -1,0 +1,8 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find locator)/config/rosconsole.config"/>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] : ${message}"/>
+
+  <node pkg="locator" name="aruco_to_point_and_talk" type="cvs5" respawn="true" output="screen">
+  </node>
+
+</launch>

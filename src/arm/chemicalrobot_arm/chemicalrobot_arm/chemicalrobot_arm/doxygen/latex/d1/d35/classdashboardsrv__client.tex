@@ -1,0 +1,236 @@
+\hypertarget{classdashboardsrv__client}{}\doxysubsection{dashboardsrv\+\_\+client类 参考}
+\label{classdashboardsrv__client}\index{dashboardsrv\_client@{dashboardsrv\_client}}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdashboardsrv__client_a135d4b406b6176c88cc50425a0add55c}\label{classdashboardsrv__client_a135d4b406b6176c88cc50425a0add55c}} 
+{\bfseries dashboardsrv\+\_\+client} (ros\+::\+Node\+Handle nh)
+\item 
+void \mbox{\hyperlink{classdashboardsrv__client_adf51068c9805647bed67e90de3285724}{load\+\_\+program}} (const string filename)
+\begin{DoxyCompactList}\small\item\em 载入并启动程序 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a546c4d4466406bcdbc3c122e5bc3c9b2}{play}} ()
+\begin{DoxyCompactList}\small\item\em 运行加载的程序 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a0efc63ac70500a92b982e3ad31a570ee}{stop}} ()
+\begin{DoxyCompactList}\small\item\em 停止程序 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a39fb48ade72559f85c4d0bcf6c400610}{robot\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em 打开\+U\+R5e电源并释放制动 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a98213e0f8004357250b48ebcd931884c}{D\+O\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em 将数字输出引脚置0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a27968923930ba3549925086396ff4aec}{set\+DO}} (int8\+\_\+t pin, bool state)
+\begin{DoxyCompactList}\small\item\em 设置数字输出引脚的电平 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a1d8e762db49270c66d2185e44c86709c}{unlock\+PS}} ()
+\begin{DoxyCompactList}\small\item\em 解除保护性停止 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a5e6b5cf42d5474b54420ff55a423793e}{R\+G2grip}} ()
+\begin{DoxyCompactList}\small\item\em 已弃用 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdashboardsrv__client_a03e22c7294eb14b320a0e9e506230b3d}{R\+G2release}} ()
+\begin{DoxyCompactList}\small\item\em 已弃用 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdashboardsrv__client_a4e3df4949121218cfe7ed76d4b52db19}{R\+G2\+\_\+is\+\_\+busy}} ()
+\begin{DoxyCompactList}\small\item\em 已弃用 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdashboardsrv__client_ad603c4281502f2078250cf9e042b946c}{R\+G2\+\_\+is\+\_\+grip}} ()
+\begin{DoxyCompactList}\small\item\em 已弃用 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdashboardsrv__client_a7babd1f4ba490894f3234e3f20e37883}{close}} ()
+\begin{DoxyCompactList}\small\item\em 关闭电催化舵机 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdashboardsrv__client_a10ecae2716bc220bca545229bbaa75b6}{open}} ()
+\begin{DoxyCompactList}\small\item\em 打开电催化舵机 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdashboardsrv__client_a6e7eadeff0cb8d78e673ff2c9be5f881}{grasp}} ()
+\begin{DoxyCompactList}\small\item\em 气动夹爪闭合 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdashboardsrv__client_a44f2d35ff761f40378d8119df08aa84c}{loose}} ()
+\begin{DoxyCompactList}\small\item\em 气动夹爪打开 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdashboardsrv__client_ac5a22eb17afb38ec1995054891b7ba24}{reset}} ()
+\begin{DoxyCompactList}\small\item\em 气动夹爪复位 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{成员函数说明}
+\mbox{\Hypertarget{classdashboardsrv__client_a7babd1f4ba490894f3234e3f20e37883}\label{classdashboardsrv__client_a7babd1f4ba490894f3234e3f20e37883}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!close@{close}}
+\index{close@{close}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily int dashboardsrv\+\_\+client\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+关闭电催化舵机 
+
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdashboardsrv__client_a98213e0f8004357250b48ebcd931884c}\label{classdashboardsrv__client_a98213e0f8004357250b48ebcd931884c}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!DO\_init@{DO\_init}}
+\index{DO\_init@{DO\_init}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{DO\_init()}{DO\_init()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::\+D\+O\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+将数字输出引脚置0 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a6e7eadeff0cb8d78e673ff2c9be5f881}\label{classdashboardsrv__client_a6e7eadeff0cb8d78e673ff2c9be5f881}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!grasp@{grasp}}
+\index{grasp@{grasp}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{grasp()}{grasp()}}
+{\footnotesize\ttfamily int dashboardsrv\+\_\+client\+::grasp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+气动夹爪闭合 
+
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdashboardsrv__client_adf51068c9805647bed67e90de3285724}\label{classdashboardsrv__client_adf51068c9805647bed67e90de3285724}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!load\_program@{load\_program}}
+\index{load\_program@{load\_program}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{load\_program()}{load\_program()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::load\+\_\+program (\begin{DoxyParamCaption}\item[{const string}]{filename }\end{DoxyParamCaption})}
+
+
+
+载入并启动程序 
+
+
+\begin{DoxyParams}{参数}
+{\em filename} & 程序名称 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdashboardsrv__client_a44f2d35ff761f40378d8119df08aa84c}\label{classdashboardsrv__client_a44f2d35ff761f40378d8119df08aa84c}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!loose@{loose}}
+\index{loose@{loose}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{loose()}{loose()}}
+{\footnotesize\ttfamily int dashboardsrv\+\_\+client\+::loose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+气动夹爪打开 
+
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdashboardsrv__client_a10ecae2716bc220bca545229bbaa75b6}\label{classdashboardsrv__client_a10ecae2716bc220bca545229bbaa75b6}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!open@{open}}
+\index{open@{open}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily int dashboardsrv\+\_\+client\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+打开电催化舵机 
+
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdashboardsrv__client_a546c4d4466406bcdbc3c122e5bc3c9b2}\label{classdashboardsrv__client_a546c4d4466406bcdbc3c122e5bc3c9b2}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!play@{play}}
+\index{play@{play}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+运行加载的程序 
+
+\mbox{\Hypertarget{classdashboardsrv__client_ac5a22eb17afb38ec1995054891b7ba24}\label{classdashboardsrv__client_ac5a22eb17afb38ec1995054891b7ba24}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!reset@{reset}}
+\index{reset@{reset}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily int dashboardsrv\+\_\+client\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+气动夹爪复位 
+
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdashboardsrv__client_a4e3df4949121218cfe7ed76d4b52db19}\label{classdashboardsrv__client_a4e3df4949121218cfe7ed76d4b52db19}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!RG2\_is\_busy@{RG2\_is\_busy}}
+\index{RG2\_is\_busy@{RG2\_is\_busy}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{RG2\_is\_busy()}{RG2\_is\_busy()}}
+{\footnotesize\ttfamily bool dashboardsrv\+\_\+client\+::\+R\+G2\+\_\+is\+\_\+busy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+已弃用 
+
+\mbox{\Hypertarget{classdashboardsrv__client_ad603c4281502f2078250cf9e042b946c}\label{classdashboardsrv__client_ad603c4281502f2078250cf9e042b946c}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!RG2\_is\_grip@{RG2\_is\_grip}}
+\index{RG2\_is\_grip@{RG2\_is\_grip}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{RG2\_is\_grip()}{RG2\_is\_grip()}}
+{\footnotesize\ttfamily bool dashboardsrv\+\_\+client\+::\+R\+G2\+\_\+is\+\_\+grip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+已弃用 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a5e6b5cf42d5474b54420ff55a423793e}\label{classdashboardsrv__client_a5e6b5cf42d5474b54420ff55a423793e}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!RG2grip@{RG2grip}}
+\index{RG2grip@{RG2grip}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{RG2grip()}{RG2grip()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::\+R\+G2grip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+已弃用 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a03e22c7294eb14b320a0e9e506230b3d}\label{classdashboardsrv__client_a03e22c7294eb14b320a0e9e506230b3d}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!RG2release@{RG2release}}
+\index{RG2release@{RG2release}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{RG2release()}{RG2release()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::\+R\+G2release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+已弃用 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a39fb48ade72559f85c4d0bcf6c400610}\label{classdashboardsrv__client_a39fb48ade72559f85c4d0bcf6c400610}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!robot\_init@{robot\_init}}
+\index{robot\_init@{robot\_init}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{robot\_init()}{robot\_init()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::robot\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+打开\+U\+R5e电源并释放制动 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a27968923930ba3549925086396ff4aec}\label{classdashboardsrv__client_a27968923930ba3549925086396ff4aec}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!setDO@{setDO}}
+\index{setDO@{setDO}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{setDO()}{setDO()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::set\+DO (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{pin,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+设置数字输出引脚的电平 
+
+
+\begin{DoxyParams}{参数}
+{\em pin} & 引脚的位置 \\
+\hline
+{\em state} & 设置的电平 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdashboardsrv__client_a0efc63ac70500a92b982e3ad31a570ee}\label{classdashboardsrv__client_a0efc63ac70500a92b982e3ad31a570ee}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!stop@{stop}}
+\index{stop@{stop}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+停止程序 
+
+\mbox{\Hypertarget{classdashboardsrv__client_a1d8e762db49270c66d2185e44c86709c}\label{classdashboardsrv__client_a1d8e762db49270c66d2185e44c86709c}} 
+\index{dashboardsrv\_client@{dashboardsrv\_client}!unlockPS@{unlockPS}}
+\index{unlockPS@{unlockPS}!dashboardsrv\_client@{dashboardsrv\_client}}
+\doxyparagraph{\texorpdfstring{unlockPS()}{unlockPS()}}
+{\footnotesize\ttfamily void dashboardsrv\+\_\+client\+::unlock\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+解除保护性停止 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+dashboard.\+h\item 
+dashboard.\+cpp\end{DoxyCompactItemize}

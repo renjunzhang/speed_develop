@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ur_description
+    relative_path: urdf/ur5e_tfsensor_pgi140.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur5e_ftsensor_pgi140.srdf
+  CONFIG:
+    author_name: tangxinsheng
+    author_email: ustcert@mail.ustc.edu.cn
+    generated_timestamp: 1659594259

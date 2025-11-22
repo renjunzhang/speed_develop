@@ -1,0 +1,12 @@
+测试demo任务管理节点启动命令:
+两个终端远程：ssh chemicalrobot@192.168.1.4  密码：123456
+
+1.
+cd chemist_robot/src/task_manager/src
+python3 demo_task.py
+
+2.
+cd chemist_robot/src/task_manager/src
+python3 demo_PMS_simulator.py
+
+注意顺序：先启动demo_task再启动demo_PMS_simulator

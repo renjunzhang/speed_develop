@@ -1,0 +1,8 @@
+{
+    "1": "Task_completed",
+    "2": "Executing_task",
+    "3": "Abnormal_task",
+    "4": "Idle_task",
+    "5": "Robot_stopped",
+    "7": "Charging_status"
+}

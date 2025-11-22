@@ -1,0 +1,20 @@
+{
+    "cmd": [
+        {
+            "name": "reset",
+            "scripts": [
+                "J robot_default 0.0 0.15 0.1 PTP"
+            ]
+        }
+    ],
+    "cmd_to_pointname": [],
+    "marker": {
+        "id": 0,
+        "size": [
+            0,
+            0
+        ]
+    },
+    "joints": [],
+    "poses": []
+}

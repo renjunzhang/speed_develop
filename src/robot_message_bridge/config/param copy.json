@@ -1,0 +1,13 @@
+{
+  "dms_url": "http://192.168.10.80:8080/rcs/robot/heartbeat",
+  "mqtt_ip": "192.168.10.80",
+  "mqtt_port": 1883,
+  "robotCode": "11336",
+  "operate_code_id": "123",
+  "AGV_name": "11336",
+  "AGV_url": "http://192.168.10.50:8182/rcms/services/rest/hikRpcService/",
+  "AGV_url2": "http://192.168.10.50:8182/rcms-dps/rest/",
+  "Uncharge_Park": "CHARGE1",
+  "map":"AA",
+  "taskTyp":"ZKD" 
+}

@@ -1,0 +1,26 @@
+
+{
+    "charge_station": "CHARGE1",
+    "A0": "E0",
+    "A1": "E1",
+    "A2": "E2",
+    "G3_1": "G3_1",
+    "A4": "E4",
+    "A5": "E5",
+    "G6": "G6",
+    "G7": "G7_1",
+    "G8": "G8",
+    "G17_1": "G17_1",
+    "G13_1": "G13_1",
+    "G14_1": "G14_1",
+    "ALDWorkstation_3": "G15_1",
+    "305_station": "U1",
+    "306_station": "U2",
+    "347_station": "347_station",
+    "347_door": "347_door",
+    "347_door_in": "347_door_in",
+    "303_door_in": "303_door_in",
+    "elec_chem_storage_workstation_306":"306_window_station",
+    "microplate_reader_bio_chem": "302_station",
+    "charge1":"charge1"
+}

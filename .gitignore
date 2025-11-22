@@ -1,0 +1,9 @@
+*.log
+*.pyc
+build/
+devel/
+logs/
+.catkin_tools/
+.vscode/
+src/robot_message_bridge/Logger_file/
+abseil-cpp/

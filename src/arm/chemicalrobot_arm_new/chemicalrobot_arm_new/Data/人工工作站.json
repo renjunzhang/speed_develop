@@ -1,0 +1,188 @@
+{
+    "cmd": [
+        {
+            "name": "move",
+            "scripts": [
+                "G 0 false true 20 50",
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "J station_operation_i_0 0.2 0.3 0.1 PTP",
+                "J station_operation_i_1 0 0.3 0.1 LIN",
+                "G 950 false true 20 50",
+                "J station_operation_i_0 0.2 0.3 0.1 LIN",
+                "J robot_operation_i_0 0.2 0.3 0.1 PTP",
+                "J robot_operation_i_1 0 0.3 0.1 LIN",
+                "G 0 false true 20 50",
+                "J robot_operation_i_0 0.2 0.3 0.1 LIN",
+                "J 人工工作站 0.0 0.3 0.1 PTP"
+            ]
+        },
+        {
+            "name": "put",
+            "scripts": [
+                "G 0 false true 20 50",
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "J robot_operation_i_0 0.2 0.3 0.1 PTP",
+                "J robot_operation_i_1 0.0 0.3 0.1 LIN",
+                "G 470 false true 20 50",
+                "J robot_operation_i_0 0.2 0.3 0.1 LIN",
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "P station_operation_i_0 0.2 0.3 0.1 PTP",
+                "P station_operation_i_1 0.0 0.3 0.1 LIN",
+                "G 0 false true 20 50",
+                "P station_operation_i_0 0.2 0.3 0.1 LIN",
+                "J 人工工作站 0 0.3 0.1 PTP"
+            ]
+        },
+        {
+            "name": "relocation",
+            "scripts": [
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "J relocation_joints_人工工作站 0 0.3 0.1 PTP",
+                "RE",
+                "J 人工工作站 0 0.3 0.1 PTP"
+            ]
+        },
+        {
+            "name": "reset",
+            "scripts": [
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "J robot_default 0 0.3 0.1 PTP"
+            ]
+        },
+        {
+            "name": "take",
+            "scripts": [
+                "G 0 false true 20 50",
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "P station_operation_i_0 0.2 0.3 0.1 PTP",
+                "P station_operation_i_1 0.0 0.3 0.1 LIN",
+                "G 470 false true 20 50",
+                "P station_operation_i_0 0.2 0.3 0.1 LIN",
+                "J 人工工作站 0.2 0.3 0.1 PTP",
+                "J robot_operation_i_0 0.2 0.3 0.1 PTP",
+                "J robot_operation_i_1 0.0 0.3 0.1 LIN",
+                "G 0 false true 20 50",
+                "J robot_operation_i_0 0.0 0.3 0.1 LIN"
+            ]
+        }
+    ],
+    "cmd_to_pointname": [
+        {
+            "cmd": "move",
+            "robot_pointname": "hole",
+            "station_pointname": "robot_hole"
+        },
+        {
+            "cmd": "put",
+            "robot_pointname": "rack",
+            "station_pointname": "rack"
+        },
+        {
+            "cmd": "take",
+            "robot_pointname": "rack",
+            "station_pointname": "rack"
+        }
+    ],
+    "joints": [
+        {
+            "name": "relocation_joints_人工工作站",
+            "value": [
+                -2.0612743536578577,
+                -1.2987173360637208,
+                2.2307751814471644,
+                -0.9377444547465821,
+                1.0761346817016602,
+                -3.109328333531515
+            ]
+        },
+        {
+            "name": "人工工作站",
+            "value": [
+                -3.0348296801196497,
+                -1.1659157437137146,
+                1.9995673338519495,
+                -0.9310751718333741,
+                0.10259389877319336,
+                -3.063784424458639
+            ]
+        },
+        {
+            "name": "人工工作站_rack_0_0_inverse",
+            "value": [
+                -2.26392108598818,
+                -0.6757795375636597,
+                1.479041878377096,
+                -0.8175878685763855,
+                2.445173740386963,
+                -3.1456082502948206
+            ]
+        },
+        {
+            "name": "人工工作站_rack_0_1_inverse",
+            "value": [
+                -2.263925377522604,
+                -0.38163478792224126,
+                1.3917892614947718,
+                -1.0144787591746827,
+                2.4461400508880615,
+                -3.147454563771383
+            ]
+        },
+        {
+            "name": "人工工作站重定位_inverse",
+            "value": [
+                -2.0612991491900843,
+                -1.2987156075290223,
+                2.230788532887594,
+                -0.9377237123302002,
+                1.0761022567749023,
+                -3.109349552785055
+            ]
+        }
+    ],
+    "marker": {
+        "id": 43,
+        "size": [
+            7.5,
+            7.5
+        ]
+    },
+    "poses": [
+        {
+            "name": "人工工作站_rack_0_0",
+            "value": [
+                0.341325745264351,
+                0.014000041774035243,
+                0.32352883323879855,
+                -0.5059142583251514,
+                0.4872711090860664,
+                -0.49183291149945285,
+                0.5145075476990773
+            ]
+        },
+        {
+            "name": "人工工作站_rack_0_1",
+            "value": [
+                0.3400519522736486,
+                0.014351047312318841,
+                0.16541695943025103,
+                -0.5099603234475433,
+                0.4868438507581881,
+                -0.49228248973248245,
+                0.5104718246788987
+            ]
+        },
+        {
+            "name": "人工工作站重定位",
+            "value": [
+                0.006322314124237227,
+                -0.07888219100993205,
+                0.4322060294537246,
+                -0.7058966124108562,
+                -0.006937023331575406,
+                0.02538222374662191,
+                0.7078259623748274
+            ]
+        }
+    ]
+}

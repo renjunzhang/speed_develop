@@ -1,0 +1,32 @@
+<launch>
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find chemicalrobot_arm_new)/config/rosconsole.config"/>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}] : ${message}"/>
+
+    <arg name="record_data_path" default="$(find chemicalrobot_arm_new)/Data" />
+    <arg name="gripper" default="/dev/PGI"/>
+    <arg name="gripper_baudrate" default="115200"/>
+    <arg name="screwslider" default="/dev/track"/>
+    <arg name="screwslider_baudrate" default="115200"/>
+    <arg name="have_ft_sensor" default="false" />
+    <arg name="end_link" default="tool0" />
+    <arg name="have_pgi" default="false"/>
+    <arg name="have_dripper" default="false"/>
+    <arg name="have_screwslide" default="false"/>
+    <arg name="relocation_tolerance" default="0.15"/>
+    
+
+    <!-- <include unless = "$(arg no_serial)" file="$(find robotiq_ft_sensor)/launch/ft_sensor.launch" /> -->
+    <node pkg="chemicalrobot_arm_new" type="ur5e_new" name="chemicalrobot_arm_new" output="screen">
+        <param name="record_data_path" type="string" value="$(arg record_data_path)" />
+        <param name="gripper" type="string" value="$(arg gripper)" />
+        <param name="gripper_baudrate" type="string" value="$(arg gripper_baudrate)" />
+        <param name="screwslider" type="string" value="$(arg screwslider)" />
+        <param name="screwslider_baudrate" type="string" value="$(arg screwslider_baudrate)" />
+        <param name="have_ft_sensor" type="bool" value="$(arg have_ft_sensor)" />
+        <param name="end_link" type="string" value="$(arg end_link)" />
+        <param name="have_pgi" type="bool" value="$(arg have_pgi)" />
+        <param name="have_dripper" type="bool" value="$(arg have_dripper)" />
+        <param name="have_screwslide" type="bool" value="$(arg have_screwslide)" />
+        <param name="relocation_tolerance" type="double" value="$(arg relocation_tolerance)" />
+    </node>
+</launch>

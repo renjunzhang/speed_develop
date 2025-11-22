@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="flask_server_bridge_node" pkg="robot_message_bridge" type="flask_server_bridge.py"  output="screen"/>
+
+
+
+</launch>

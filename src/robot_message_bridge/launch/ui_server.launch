@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="ui_server_node" pkg="robot_message_bridge" type="ui_server.py"  output="screen"/>
+
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="joy" type="joy_node" name="joystick_ur" respawn="false">
+        <param name="dev" value="/dev/input/js1" type="string"/>
+        <param name="autorepeat_rate" value="50" />
+    </node>
+
+    <node pkg="chemicalrobot_arm" type="ur5e_js" name="ur5e_js" output="screen"> 
+        <param name="tra_scale" value="0.01" type="double"/>
+        <param name="rot_scale" value="0.05" type="double"/>
+    </node>
+
+</launch>

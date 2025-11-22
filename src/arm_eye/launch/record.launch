@@ -1,0 +1,13 @@
+<launch>
+  <arg name="no_serial" default="false" />
+  <arg name="file_root" default="$(find chemicalrobot_arm)/data/" />
+  <arg name="checkgrasp" default="false" />
+
+  <!-- <include unless = "$(arg no_serial)" file="$(find robotiq_ft_sensor)/launch/ft_sensor.launch" /> -->
+  
+  <node pkg="chemicalrobot_arm" type="record" name="chemicalrobot_arm" output="screen">
+    <param name="file_root" type="string" value="$(arg file_root)" />
+    <param name="no_serial" type="bool" value="$(arg no_serial)" />
+    <param name="checkgrasp" type="string" value="$(arg checkgrasp)" />
+  </node>
+</launch>

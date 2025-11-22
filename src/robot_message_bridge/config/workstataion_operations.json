@@ -1,0 +1,126 @@
+{
+    "experiment_name": "ALD",
+    "param": [
+        {
+            "workstation": "starting_station",
+            "operations": {
+                "move-w_starting_station-to-r_hik_robot_11335-oper-rack_slot_1-slot_bottle_storage_0-and-rack_slot_1-slot_bottle_storage_0":"take0",
+                "move-w_starting_station-to-r_hik_robot_11335-oper-rack_slot_2-slot_bottle_storage_0-and-rack_slot_1-slot_bottle_storage_0":"take1",
+                "move-w_starting_station-to-r_hik_robot_11335-oper-rack_slot_3-slot_bottle_storage_0-and-rack_slot_1-slot_bottle_storage_0":"take2",
+                "move-w_starting_station-to-r_hik_robot_11335-oper-rack_slot_3-slot_bottle_storage_1-and-rack_slot_1-slot_bottle_storage_0":"take2",
+                "move-w_starting_station-to-r_hik_robot_11335-oper-rack_slot_4-slot_bottle_storage_0-and-rack_slot_1-slot_bottle_storage_0":"take3"
+
+            }
+        },
+        {
+            "workstation": "G6",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_G6-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_G6-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+        },
+        {
+            "workstation": "G3_1",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_G3_1-oper-rack_slot_0-and-rack_slot_0": "put0",
+                "move-r_hik_robot_11335-to-w_G3_1-oper-rack_slot_1-and-rack_slot_1": "put1",
+                "move-w_G3_1-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take0",
+                "move-w_G3_1-to-r_hik_robot_11335-oper-rack_slot_1-and-rack_slot_1": "take1"
+            }
+        },
+        {
+            "workstation": "ALDWorkstation_3",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_ALDWorkstation_3-oper-rack_slot_0-and-rack_slot_0": "put0",
+                "move-r_hik_robot_11335-to-w_ALDWorkstation_3-oper-rack_slot_1-and-rack_slot_1": "put1",
+                "move-w_ALDWorkstation_3-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take0",
+                "move-w_ALDWorkstation_3-to-r_hik_robot_11335-oper-rack_slot_1-and-rack_slot_1": "take1"
+            }
+        },
+        {
+            "workstation": "G17_1",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_G17_1-oper-rack_slot_0-and-rack_slot_0": "put0",
+                "move-r_hik_robot_11335-to-w_G17_1-oper-rack_slot_1-and-rack_slot_1": "put1",
+                "move-w_17_1-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take0",
+                "move-w_17_1-to-r_hik_robot_11335-oper-rack_slot_1-and-rack_slot_1": "take1"
+            }
+        },
+        {
+            "workstation": "G13_1",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_G13_1-oper-rack_slot_0-and-rack_slot_0": "put0",
+                "move-r_hik_robot_11335-to-w_G13_1-oper-rack_slot_1-and-rack_slot_1": "put1",
+                "move-w_13_1-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take0",
+                "move-w_13_1-to-r_hik_robot_11335-oper-rack_slot_1-and-rack_slot_1": "take1"
+            }
+        },
+        {
+            "workstation": "G14_1",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_G14_1-oper-rack_slot_0-and-rack_slot_0": "put0",
+                "move-r_hik_robot_11335-to-w_G14_1-oper-rack_slot_1-and-rack_slot_1": "put1",
+                "move-w_14_1-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take0",
+                "move-w_14_1-to-r_hik_robot_11335-oper-rack_slot_1-and-rack_slot_1": "take1"
+            }
+        },
+        {
+            "workstation": "306_station",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_306_station-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_306_station-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+        },
+        {
+            "workstation": "305_station",
+            "operations": {
+                "move-r_hik_robot_11335-to-w_305_station-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_305_station-to-r_hik_robot_11335-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+        },
+        {
+            "workstation": "hf_robot_004",
+            "operations": {
+                "operation_1": "move_rack_1",
+                "operation_2": "move_rack_2"
+            }
+        },
+        {
+            "workstation": "347_station",
+            "operations": {
+                "move-r_hik_robot_11339-to-w_347_station-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_347_station-to-r_hik_robot_11339-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+
+        },
+        {
+            "workstation": "347_door_in",
+            "operations": {
+                "move-r_hik_robot_11339-to-w_347_door_in-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_347_door_in-to-r_hik_robot_11339-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+        },
+        {
+            "workstation": "303_door_in",
+            "operations": {
+                "move-r_hik_robot_11339-to-w_303_door_in-oper-rack_slot_0-and-rack_slot_0": "put",
+                "move-w_303_door_in-to-r_hik_robot_11339-oper-rack_slot_0-and-rack_slot_0": "take"
+            }
+        },
+        {
+            "workstation": "elec_chem_storage_workstation_306",
+            "operations": {
+                "move-r_hik_robot_11337-to-w_elec_chem_storage_workstation_306-oper-96_hole_plate_slot_0-and-96_hole_plate_slot_0": "put",
+                "move-w_elec_chem_storage_workstation_306-to-r_hik_robot_11337-oper-96_hole_plate_slot_0-and-96_hole_plate_slot_0": "take"
+            }
+        },
+        
+        {
+            "workstation": "microplate_reader_bio_chem",
+            "operations": {
+                "move-r_hik_robot_11337-to-w_microplate_reader_bio_chem-oper-96_hole_plate_slot_0-and-96_hole_plate_slot_0": "put",
+                "move-w_microplate_reader_bio_chem-to-r_hik_robot_11337-oper-96_hole_plate_slot_0-and-96_hole_plate_slot_0": "take"
+            }
+        }
+    ]
+}

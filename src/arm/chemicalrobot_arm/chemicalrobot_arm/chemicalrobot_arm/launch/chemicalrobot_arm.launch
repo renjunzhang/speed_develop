@@ -1,0 +1,21 @@
+<launch>
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find chemicalrobot_arm)/config/rosconsole.config"/>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}] : ${message}"/>
+    <arg name="no_serial" default="false" />
+    <arg name="file_root" default="$(find chemicalrobot_arm)/data/" />
+    <arg name="checkgrasp" default="false" />
+    <arg name="gripper" default="/dev/PGI"/>
+    <arg name="soft_gripper" default="/dev/GRIPPER"/>
+    
+    <!-- <arg name="lookup" default="false" /> -->
+
+    <!-- <include unless = "$(arg no_serial)" file="$(find robotiq_ft_sensor)/launch/ft_sensor.launch" /> -->
+    <node pkg="chemicalrobot_arm" type="ur5e" name="chemicalrobot_arm" output="screen">
+        <param name="file_root" type="string" value="$(arg file_root)" />
+        <param name="gripper" type="string" value="$(arg gripper)" />
+        <param name="soft_gripper" type="string" value="$(arg soft_gripper)" />
+        <param name="no_serial" type="bool" value="$(arg no_serial)" />
+        <param name="checkgrasp" type="bool" value="$(arg checkgrasp)" />
+        <!-- <param name="lookup" type="bool" value="$(arg checkgrasp)" /> -->
+    </node>
+</launch>

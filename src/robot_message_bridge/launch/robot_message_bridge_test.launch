@@ -1,0 +1,8 @@
+<launch>
+  <!-- 默认使用RCS-2000系统(default="rcs_2000)可选RCS-lite系统（default="rcs_lite） -->
+  <arg name="hiksystem" default="rcs_2000" />
+
+  <node name="robot_msg_manager_node" pkg="robot_message_bridge" type="dms_to_robot_test.py" output="screen">
+    <param name="hiksystem" value="$(arg hiksystem)" />
+  </node>
+</launch>

@@ -1,0 +1,734 @@
+\hypertarget{classur5e__action}{}\doxysubsection{ur5e\+\_\+action类 参考}
+\label{classur5e__action}\index{ur5e\_action@{ur5e\_action}}
+
+
+机器人化学家机械臂部分主要模块  
+
+
+
+
+{\ttfamily \#include $<$motion\+\_\+planning.\+h$>$}
+
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classur5e__action_a1cad5a2ed2832ddcebf94cbe706483bc}\label{classur5e__action_a1cad5a2ed2832ddcebf94cbe706483bc}} 
+{\bfseries ur5e\+\_\+action} (ros\+::\+Node\+Handle nh, shared\+\_\+ptr$<$ \mbox{\hyperlink{classdashboardsrv__client}{dashboardsrv\+\_\+client}} $>$ dbptr, moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface\+Ptr mgptr)
+\item 
+void \mbox{\hyperlink{classur5e__action_abd89dc36c944310cddfde5b7faa018f5}{Load\+Station\+Info}} (string station\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 载入特定站点的结构化信息（关节角和位姿）(注意：该函数只在机械臂复位后才会调用，所以需要在站点操作前发送复位指令) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur5e__action_a0404ee7c28bc225515a9aae89c63da69}\label{classur5e__action_a0404ee7c28bc225515a9aae89c63da69}} 
+void \mbox{\hyperlink{classur5e__action_a0404ee7c28bc225515a9aae89c63da69}{Load\+Robot\+Joint\+Info}} ()
+\begin{DoxyCompactList}\small\item\em 载入机器人平台上的关节角 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_ab65688d3b748f20626df515e6db0e0d4}{Force\+Feedback}} (string name, double speed, double thre)
+\begin{DoxyCompactList}\small\item\em 力反馈控制 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_aa9e4a4f4c57e6a31e22d1ed1df04dc07}{Init}} (const string filename)
+\begin{DoxyCompactList}\small\item\em 初始化\+U\+R5e和夹爪,包括启动电源,释放制动器,加载远程控制程序(该函数要求\+U\+R5e处于远程控制模式) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classur5e__action_a6eff1fd587b459f5d62300e5b0a43dd3}{Goto\+Default\+Pose}} (string name)
+\begin{DoxyCompactList}\small\item\em 将机械臂移动到默认位姿 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a378c814e03cda04dadcf83264b0623f8}{Save\+Station\+Info}} (std\+::string station, bool is\+Joint)
+\begin{DoxyCompactList}\small\item\em 站点信息记录主函数,包含\+Save模式和\+Go模式(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a1a5c88e72caca35acae5b20528972c47}{Switch\+Mode}} (int mode)
+\begin{DoxyCompactList}\small\item\em 用于切换模式(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a5e40f668e7f1cf9372a4956fe0a89402}{Save\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em 站点信息记录中的\+Save模式,此模式下输入名称会调用\+Save\+Station\+Joint()或\+Save\+Station\+Pose()来保存信息至对应json文件.(T\+O\+DO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a3821aa1d301cc367f3e429fddac2bf13}{Go\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em 站点信息记录中的\+Go模式,此模式下输入关节角或位姿名称就可以移动到对应位置.(T\+O\+DO) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_af2dc61569bcccae269d7bbb5f7a88031}{Save\+Station\+Pose}} (string file\+\_\+path, string name, Vector3d X, Quaterniond Q)
+\begin{DoxyCompactList}\small\item\em 记录当前位姿到对应json文件中(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a11caa08f40143a24344b3983d72876be}{Save\+Station\+Joint}} (string file\+\_\+path, string name, vector$<$ double $>$ joints)
+\begin{DoxyCompactList}\small\item\em 记录当前关节角到对应json文件中(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a95739ae48e076bcd233baf4a6116cc7e}{Command\+Execute}} (std\+::string station, std\+::string operation, int rack, int bottle, int rack\+\_\+oper, int light\+\_\+num, int paper, int dryer\+\_\+num, int libs\+\_\+num)
+\begin{DoxyCompactList}\small\item\em 解析并执行任务调度模块发送的指令(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a75d3d8b2e789508f05b02fdf18a98189}{Move\+Line\+\_\+pilz}} (Movetowards towards, double dis, double speed\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em 机械臂末端在工作空间中沿直线轨迹移动，会在起点和目标之间按照一条直线运动 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a11c20bb95f0c5b4519d9329f5d93837c}{Move\+Circle\+\_\+pilz}} (Cir\+Type type, std\+::string name, std\+::string goal)
+\begin{DoxyCompactList}\small\item\em 机械臂末端在工作空间中沿圆弧轨迹运动，需要指定圆心或中间点(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a93700c0ac3dfaff311bf7dfa0df177b0}{Sequence\+Move\+\_\+pilz}} (vector$<$ string $>$ \&V\+\_\+name, vector$<$ double $>$ \&V\+\_\+radius, vector$<$ double $>$ \&V\+\_\+speed, vector$<$ double $>$ \&V\+\_\+acc, vector$<$ string $>$ \&V\+\_\+planner, bool validate, bool record)
+\begin{DoxyCompactList}\small\item\em 根据设定的操作进行移动 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a36ab23887ca5db426913b25f10089dc5}{Sequence\+Move\+\_\+pilz}} (vector$<$ string $>$ \&V\+\_\+name, vector$<$ double $>$ \&V\+\_\+radius, vector$<$ double $>$ \&V\+\_\+speed, vector$<$ double $>$ \&V\+\_\+acc, vector$<$ string $>$ \&V\+\_\+planner, bool validate, bool record, std\+::string speedprofile)
+\begin{DoxyCompactList}\small\item\em 根据设定的操作进行移动(\+T\+O\+D\+O) \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{classur5e__action_add23fff627124eee583cb8e18ebcfb35}{Validate\+One\+Req}} (vector$<$ string $>$ \&V\+\_\+name, vector$<$ double $>$ \&V\+\_\+radius, vector$<$ double $>$ \&V\+\_\+speed, vector$<$ double $>$ \&V\+\_\+acc, vector$<$ string $>$ \&V\+\_\+planner)
+\begin{DoxyCompactList}\small\item\em 验证给定的单个操作是否可行(该操作在必要时会插入路径点) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a0b329f760419d9004ae5d8119b64bcf9}{Sequence\+Validate\+\_\+pilz}} (vector$<$ vector$<$ string $>$ $\ast$ $>$ V\+\_\+name, vector$<$ vector$<$ double $>$ $\ast$ $>$ V\+\_\+radius, vector$<$ vector$<$ double $>$ $\ast$ $>$ V\+\_\+speed, vector$<$ vector$<$ double $>$ $\ast$ $>$ V\+\_\+acc, vector$<$ vector$<$ string $>$ $\ast$ $>$ V\+\_\+planner)
+\begin{DoxyCompactList}\small\item\em 验证给定的多个操作是否可行 \end{DoxyCompactList}\item 
+moveit\+\_\+msgs\+::\+Motion\+Sequence\+Request \mbox{\hyperlink{classur5e__action_a3719b47c3443eb441d5054d470c0a817}{Construct\+Seq\+Req}} (vector$<$ string $>$ \&V\+\_\+name, vector$<$ double $>$ \&V\+\_\+radius, vector$<$ double $>$ \&V\+\_\+speed, vector$<$ double $>$ \&V\+\_\+acc, vector$<$ string $>$ \&V\+\_\+planner, bool validate)
+\begin{DoxyCompactList}\small\item\em 根据给定的操作，构造轨迹规划的request \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_aa4cadcab5026f74ef0b1c191b02b1fd0}{Reset\+Arm}} ()
+\begin{DoxyCompactList}\small\item\em 异常情况下复位机械臂。该函数会倒序执行存储的路径点和夹爪操作，直到末端没有夹持物体且到达安全位置。若在恢复过程中出现异常，会停止运动并杀死机械臂节点。此时需要人工介入。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a203d1efd2d8637359e246b7f17bc6b68}{Gripper\+\_\+op}} (uint16\+\_\+t position, bool check=false, bool block=false, uint16\+\_\+t force=20, uint16\+\_\+t speed=50)
+\begin{DoxyCompactList}\small\item\em 控制夹爪闭合和张开,并检查是否夹持有物体 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_adb35064d8869e2748113ab66c4c864fa}{Json\+Pub}} (vector$<$ string $>$ msgs=\{\char`\"{}Y\+ES\char`\"{}, \char`\"{}\char`\"{}\}, vector$<$ double $>$ relocation\+\_\+err=\{\}, vector$<$ int $>$ exception\+\_\+bottle=\{\}, int rack\+\_\+absnum=0)
+\begin{DoxyCompactList}\small\item\em 操作状态反馈,向上位机发布/obs\+Operation\+\_\+out话题 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_a9cf1c33ea233f87a17bba5d10c6a89af}{set\+Avg\+Cartesian\+Speed}} (moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface\+::\+Plan \&plan, const string end\+\_\+effector, const double speed)
+\begin{DoxyCompactList}\small\item\em 设定笛卡尔轨迹的末端速度,已弃用 \end{DoxyCompactList}\item 
+Isometry3d \mbox{\hyperlink{classur5e__action_ac4055e134c059ae9d11f59323c50648b}{Calculate\+Poses}} (string station\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 根据当前站点的标签位姿计算相对基座位姿(用于重定位之后) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classur5e__action_af00d9dc758ea7b9c6be95eddb8a92c4a}{Insert\+Poses}} (vector$<$ string $>$ \&V\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 根据给定的路径点序列插入路径点 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur5e__action_a5546ae456113d7eaaf1902da43543fce}\label{classur5e__action_a5546ae456113d7eaaf1902da43543fce}} 
+void \mbox{\hyperlink{classur5e__action_a5546ae456113d7eaaf1902da43543fce}{obs\+\_\+\+Callback}} (const std\+\_\+msgs\+::\+String\+Const\+Ptr \&obs\+Operation\+\_\+in)
+\begin{DoxyCompactList}\small\item\em 订阅/obs\+Operation\+\_\+in的回调函数,接收上位机指令进行对应操作 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur5e__action_ac99f5949ee592d5eee9639dd750d5fc2}\label{classur5e__action_ac99f5949ee592d5eee9639dd750d5fc2}} 
+void \mbox{\hyperlink{classur5e__action_ac99f5949ee592d5eee9639dd750d5fc2}{safety\+\_\+\+Callback}} (const ur\+\_\+dashboard\+\_\+msgs\+::\+Safety\+Mode\+Const\+Ptr \&safetymode)
+\begin{DoxyCompactList}\small\item\em 订阅/ur\+\_\+hardware\+\_\+interface/safety\+\_\+mode的回调函数,解除保护性停止 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur5e__action_acf7d6b7fec5e54b24bc4eb730015609c}\label{classur5e__action_acf7d6b7fec5e54b24bc4eb730015609c}} 
+void \mbox{\hyperlink{classur5e__action_acf7d6b7fec5e54b24bc4eb730015609c}{exec\+\_\+\+Callback}} (const moveit\+\_\+msgs\+::\+Execute\+Trajectory\+Action\+Result\+Const\+Ptr \&execresult)
+\begin{DoxyCompactList}\small\item\em 订阅/execute\+\_\+trajectory/result的回调函数,实时获取轨迹执行结果 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_ac9bdae6b6f7056962d063ad6566cadfa}{Record\+Sequence}} (size\+\_\+t \&i, vector$<$ string $>$ V\+\_\+name, vector$<$ double $>$ V\+\_\+radius, vector$<$ double $>$ V\+\_\+speed, vector$<$ double $>$ V\+\_\+acc, vector$<$ string $>$ V\+\_\+planner)
+\begin{DoxyCompactList}\small\item\em 记录上一次轨迹规划的信息 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_aa9f9d10f9ca890e1f2df1f17d8a277da}{Record\+Curr\+Sequence}} (double speed, double acc, string planner)
+\begin{DoxyCompactList}\small\item\em 记录当前位置到下一位置的轨迹规划信息 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur5e__action_af421219a79e320d9a688adb7df830486}\label{classur5e__action_af421219a79e320d9a688adb7df830486}} 
+bool \mbox{\hyperlink{classur5e__action_af421219a79e320d9a688adb7df830486}{Clear\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em 根据夹持状态和当前末端位置清空已记录的路径点 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classur5e__action_afd1213819dafa025702c844387ffdc65}{Get\+Nextpose}} (string name, moveit\+\_\+msgs\+::\+Constraints \&pose\+\_\+goal, geometry\+\_\+msgs\+::\+Pose\+Stamped \&next\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em 根据指定名称,计算下一个目标位置和约束 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classur5e__action_a7ba99724f414e9c0a92ab9e4634e0305}{Get\+Blendradius}} (geometry\+\_\+msgs\+::\+Pose curr\+\_\+pose, geometry\+\_\+msgs\+::\+Pose next\+\_\+pose, geometry\+\_\+msgs\+::\+Pose n\+\_\+next\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em 根据当前位置,目标位置和下一位置计算融合半径 \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{classur5e__action_a38599b94f944da9b0d69358910e20f80}{Get\+Joints}} (string name)
+\begin{DoxyCompactList}\small\item\em 从\+\_\+\+Init\+\_\+joints和\+\_\+\+Robot\+\_\+joints中获取关节角 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface\+Ptr \mbox{\hyperlink{classur5e__action_a15648fe2df899f073a9787865dea8e0d}{\+\_\+mgptr}}
+\begin{DoxyCompactList}\small\item\em moveit movegroup 指针 \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classdashboardsrv__client}{dashboardsrv\+\_\+client}} $>$ \mbox{\hyperlink{classur5e__action_aad5e154581680c4aed973b938d526268}{\+\_\+dbptr}}
+\begin{DoxyCompactList}\small\item\em U\+R5e的dashboard客户端,用于远程启动\+U\+R5e,加载远程控制程序 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classur5e__action_a0db5fcc23978e2575473fb765388f202}{\+\_\+file\+\_\+root}}
+\begin{DoxyCompactList}\small\item\em 存放站点位姿信息文件的路径 \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classur5e__action_a6e884c93bc8e326b2e6038bb928acfcd}{\+\_\+curr\+\_\+station}}
+\begin{DoxyCompactList}\small\item\em 机器人当前站点 \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Pose \mbox{\hyperlink{classur5e__action_accbd5fe90ea2b7b0eb08a344656f3159}{\+\_\+\+C\+T\+F\+\_\+pose}}
+\begin{DoxyCompactList}\small\item\em 离心机标签位姿 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{详细描述}
+机器人化学家机械臂部分主要模块 
+
+
+
+\doxysubsubsection{成员函数说明}
+\mbox{\Hypertarget{classur5e__action_ac4055e134c059ae9d11f59323c50648b}\label{classur5e__action_ac4055e134c059ae9d11f59323c50648b}} 
+\index{ur5e\_action@{ur5e\_action}!CalculatePoses@{CalculatePoses}}
+\index{CalculatePoses@{CalculatePoses}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{CalculatePoses()}{CalculatePoses()}}
+{\footnotesize\ttfamily Isometry3d ur5e\+\_\+action\+::\+Calculate\+Poses (\begin{DoxyParamCaption}\item[{string}]{station\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+根据当前站点的标签位姿计算相对基座位姿(用于重定位之后) 
+
+
+\begin{DoxyParams}{参数}
+{\em station\+\_\+name} & 当前站点名称 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+标签位姿 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classur5e__action_a95739ae48e076bcd233baf4a6116cc7e}\label{classur5e__action_a95739ae48e076bcd233baf4a6116cc7e}} 
+\index{ur5e\_action@{ur5e\_action}!CommandExecute@{CommandExecute}}
+\index{CommandExecute@{CommandExecute}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{CommandExecute()}{CommandExecute()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Command\+Execute (\begin{DoxyParamCaption}\item[{std\+::string}]{station,  }\item[{std\+::string}]{operation,  }\item[{int}]{rack,  }\item[{int}]{bottle,  }\item[{int}]{rack\+\_\+oper,  }\item[{int}]{light\+\_\+num,  }\item[{int}]{paper,  }\item[{int}]{dryer\+\_\+num,  }\item[{int}]{libs\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+解析并执行任务调度模块发送的指令(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em station} & 工作站名称 \\
+\hline
+{\em operation} & 操作名称 \\
+\hline
+{\em rack} & 机器人平台上的试管架编号 \\
+\hline
+{\em bottle} & 试管架上的试管编号 \\
+\hline
+{\em rack\+\_\+oper} & 起始样品架,回收样品架的试管架编号 \\
+\hline
+{\em light\+\_\+num} & 光催化位置编号 \\
+\hline
+{\em paper} & 电催化碳纸编号 \\
+\hline
+{\em dryer\+\_\+num} & 烘干机位置编号 \\
+\hline
+{\em libs\+\_\+num} & libs样品编号 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a3719b47c3443eb441d5054d470c0a817}\label{classur5e__action_a3719b47c3443eb441d5054d470c0a817}} 
+\index{ur5e\_action@{ur5e\_action}!ConstructSeqReq@{ConstructSeqReq}}
+\index{ConstructSeqReq@{ConstructSeqReq}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{ConstructSeqReq()}{ConstructSeqReq()}}
+{\footnotesize\ttfamily moveit\+\_\+msgs\+::\+Motion\+Sequence\+Request ur5e\+\_\+action\+::\+Construct\+Seq\+Req (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{V\+\_\+name,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+radius,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+speed,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+acc,  }\item[{vector$<$ string $>$ \&}]{V\+\_\+planner,  }\item[{bool}]{validate }\end{DoxyParamCaption})}
+
+
+
+根据给定的操作，构造轨迹规划的request 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 需要经过的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 每个路点的融合半径系数(0,1)(最后一个路径点必须为0) \\
+\hline
+{\em V\+\_\+speed} & 每个路点的速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+acc} & 每个路点的加速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+planner} & 每个路点的规划器(\+P\+T\+P,\+L\+I\+N) \\
+\hline
+{\em validate} & 是否仅验证该操作是否可行 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+moveit\+\_\+msgs\+::\+Motion\+Sequence\+Request 构造得到的轨迹规划request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classur5e__action_ab65688d3b748f20626df515e6db0e0d4}\label{classur5e__action_ab65688d3b748f20626df515e6db0e0d4}} 
+\index{ur5e\_action@{ur5e\_action}!ForceFeedback@{ForceFeedback}}
+\index{ForceFeedback@{ForceFeedback}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{ForceFeedback()}{ForceFeedback()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Force\+Feedback (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{double}]{speed,  }\item[{double}]{thre }\end{DoxyParamCaption})}
+
+
+
+力反馈控制 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 目标位姿 \\
+\hline
+{\em speed} & 移动速度系数，建议0.01，以便有足够时间反应 \\
+\hline
+{\em thre} & 力矩阈值，超过此阈值会停止移动 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a7ba99724f414e9c0a92ab9e4634e0305}\label{classur5e__action_a7ba99724f414e9c0a92ab9e4634e0305}} 
+\index{ur5e\_action@{ur5e\_action}!GetBlendradius@{GetBlendradius}}
+\index{GetBlendradius@{GetBlendradius}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{GetBlendradius()}{GetBlendradius()}}
+{\footnotesize\ttfamily double ur5e\+\_\+action\+::\+Get\+Blendradius (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose}]{curr\+\_\+pose,  }\item[{geometry\+\_\+msgs\+::\+Pose}]{next\+\_\+pose,  }\item[{geometry\+\_\+msgs\+::\+Pose}]{n\+\_\+next\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+根据当前位置,目标位置和下一位置计算融合半径 
+
+
+\begin{DoxyParams}{参数}
+{\em curr\+\_\+pose} & 当前位置 \\
+\hline
+{\em next\+\_\+pose} & 目标位置 \\
+\hline
+{\em n\+\_\+next\+\_\+pose} & 目标位置的下一位置 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a38599b94f944da9b0d69358910e20f80}\label{classur5e__action_a38599b94f944da9b0d69358910e20f80}} 
+\index{ur5e\_action@{ur5e\_action}!GetJoints@{GetJoints}}
+\index{GetJoints@{GetJoints}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{GetJoints()}{GetJoints()}}
+{\footnotesize\ttfamily vector$<$ double $>$ ur5e\+\_\+action\+::\+Get\+Joints (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+从\+\_\+\+Init\+\_\+joints和\+\_\+\+Robot\+\_\+joints中获取关节角 
+
+
+\begin{DoxyParams}{参数}
+{\em 关节角的名字} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_afd1213819dafa025702c844387ffdc65}\label{classur5e__action_afd1213819dafa025702c844387ffdc65}} 
+\index{ur5e\_action@{ur5e\_action}!GetNextpose@{GetNextpose}}
+\index{GetNextpose@{GetNextpose}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{GetNextpose()}{GetNextpose()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Get\+Nextpose (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{moveit\+\_\+msgs\+::\+Constraints \&}]{pose\+\_\+goal,  }\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{next\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+根据指定名称,计算下一个目标位置和约束 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 指定路点名,\char`\"{}\+J\char`\"{}开头则为关节角,\char`\"{}\+P\char`\"{}开头则为位置 \\
+\hline
+{\em pose\+\_\+goal} & 需要构造的目标约束 \\
+\hline
+{\em next\+\_\+pose} & 需要构造的目标位置 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a3821aa1d301cc367f3e429fddac2bf13}\label{classur5e__action_a3821aa1d301cc367f3e429fddac2bf13}} 
+\index{ur5e\_action@{ur5e\_action}!GoMode@{GoMode}}
+\index{GoMode@{GoMode}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{GoMode()}{GoMode()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Go\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+站点信息记录中的\+Go模式,此模式下输入关节角或位姿名称就可以移动到对应位置.(T\+O\+DO) 
+
+\mbox{\Hypertarget{classur5e__action_a6eff1fd587b459f5d62300e5b0a43dd3}\label{classur5e__action_a6eff1fd587b459f5d62300e5b0a43dd3}} 
+\index{ur5e\_action@{ur5e\_action}!GotoDefaultPose@{GotoDefaultPose}}
+\index{GotoDefaultPose@{GotoDefaultPose}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{GotoDefaultPose()}{GotoDefaultPose()}}
+{\footnotesize\ttfamily bool ur5e\+\_\+action\+::\+Goto\+Default\+Pose (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+将机械臂移动到默认位姿 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 指定需要移动的关节角 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a203d1efd2d8637359e246b7f17bc6b68}\label{classur5e__action_a203d1efd2d8637359e246b7f17bc6b68}} 
+\index{ur5e\_action@{ur5e\_action}!Gripper\_op@{Gripper\_op}}
+\index{Gripper\_op@{Gripper\_op}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{Gripper\_op()}{Gripper\_op()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Gripper\+\_\+op (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{position,  }\item[{bool}]{check = {\ttfamily false},  }\item[{bool}]{block = {\ttfamily false},  }\item[{uint16\+\_\+t}]{force = {\ttfamily 20},  }\item[{uint16\+\_\+t}]{speed = {\ttfamily 50} }\end{DoxyParamCaption})}
+
+
+
+控制夹爪闭合和张开,并检查是否夹持有物体 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 夹爪闭合位置(0\+:完全打开,1000\+:完全闭合) \\
+\hline
+{\em check} & 是否检查夹持到物体 \\
+\hline
+{\em block} & 是否等待夹爪完全到位 \\
+\hline
+{\em force} & 设定抓取力(0,100\mbox{]} \\
+\hline
+{\em speed} & 设定开合速度(0,100\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_aa9e4a4f4c57e6a31e22d1ed1df04dc07}\label{classur5e__action_aa9e4a4f4c57e6a31e22d1ed1df04dc07}} 
+\index{ur5e\_action@{ur5e\_action}!Init@{Init}}
+\index{Init@{Init}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Init (\begin{DoxyParamCaption}\item[{const string}]{filename }\end{DoxyParamCaption})}
+
+
+
+初始化\+U\+R5e和夹爪,包括启动电源,释放制动器,加载远程控制程序(该函数要求\+U\+R5e处于远程控制模式) 
+
+
+\begin{DoxyParams}{参数}
+{\em filename} & 用于指定加载哪个程序,目前只需要加载\char`\"{}remote\+\_\+control.\+urp\textbackslash{}n\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_af00d9dc758ea7b9c6be95eddb8a92c4a}\label{classur5e__action_af00d9dc758ea7b9c6be95eddb8a92c4a}} 
+\index{ur5e\_action@{ur5e\_action}!InsertPoses@{InsertPoses}}
+\index{InsertPoses@{InsertPoses}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{InsertPoses()}{InsertPoses()}}
+{\footnotesize\ttfamily bool ur5e\+\_\+action\+::\+Insert\+Poses (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{V\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+根据给定的路径点序列插入路径点 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 待插入的路径点序列 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否插入了路径点 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classur5e__action_adb35064d8869e2748113ab66c4c864fa}\label{classur5e__action_adb35064d8869e2748113ab66c4c864fa}} 
+\index{ur5e\_action@{ur5e\_action}!JsonPub@{JsonPub}}
+\index{JsonPub@{JsonPub}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{JsonPub()}{JsonPub()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Json\+Pub (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{msgs = {\ttfamily \{\char`\"{}YES\char`\"{},~\char`\"{}\char`\"{}\}},  }\item[{vector$<$ double $>$}]{relocation\+\_\+err = {\ttfamily \{\}},  }\item[{vector$<$ int $>$}]{exception\+\_\+bottle = {\ttfamily \{\}},  }\item[{int}]{rack\+\_\+absnum = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+操作状态反馈,向上位机发布/obs\+Operation\+\_\+out话题 
+
+
+\begin{DoxyParams}{参数}
+{\em msgs} & 包含\+Is\+Done和\+Exception \\
+\hline
+{\em relocation\+\_\+err} & 底盘定位误差\{位置x,y,z,姿态x,y,z,w\} \\
+\hline
+{\em exception\+\_\+bottle} & 试管架中没有试管的位置,若\+Exception为\char`\"{}bottle\+\_\+not\+\_\+all\char`\"{},则该参数非空(暂未使用) \\
+\hline
+{\em rack\+\_\+absnum} & 启动区扫码完成后,发送试管架绝对编号(暂未使用) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_abd89dc36c944310cddfde5b7faa018f5}\label{classur5e__action_abd89dc36c944310cddfde5b7faa018f5}} 
+\index{ur5e\_action@{ur5e\_action}!LoadStationInfo@{LoadStationInfo}}
+\index{LoadStationInfo@{LoadStationInfo}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{LoadStationInfo()}{LoadStationInfo()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Load\+Station\+Info (\begin{DoxyParamCaption}\item[{string}]{station\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+载入特定站点的结构化信息（关节角和位姿）(注意：该函数只在机械臂复位后才会调用，所以需要在站点操作前发送复位指令) 
+
+
+\begin{DoxyParams}{参数}
+{\em station\+\_\+name} & 需要载入的站点名称 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a11c20bb95f0c5b4519d9329f5d93837c}\label{classur5e__action_a11c20bb95f0c5b4519d9329f5d93837c}} 
+\index{ur5e\_action@{ur5e\_action}!MoveCircle\_pilz@{MoveCircle\_pilz}}
+\index{MoveCircle\_pilz@{MoveCircle\_pilz}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{MoveCircle\_pilz()}{MoveCircle\_pilz()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Move\+Circle\+\_\+pilz (\begin{DoxyParamCaption}\item[{Cir\+Type}]{type,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{goal }\end{DoxyParamCaption})}
+
+
+
+机械臂末端在工作空间中沿圆弧轨迹运动，需要指定圆心或中间点(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em type} & 指定圆弧的类型。\+C\+E\+N\+T\+E\+R：指定圆心，则会在起点和目标之间按照较短的弧运动；\+I\+N\+T\+E\+R\+I\+M：指定中间点，则圆弧轨迹会经过指定的中间点 \\
+\hline
+{\em name} & 圆弧的圆心名称或中间点名称 \\
+\hline
+{\em goal} & 目标点名称 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a75d3d8b2e789508f05b02fdf18a98189}\label{classur5e__action_a75d3d8b2e789508f05b02fdf18a98189}} 
+\index{ur5e\_action@{ur5e\_action}!MoveLine\_pilz@{MoveLine\_pilz}}
+\index{MoveLine\_pilz@{MoveLine\_pilz}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{MoveLine\_pilz()}{MoveLine\_pilz()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Move\+Line\+\_\+pilz (\begin{DoxyParamCaption}\item[{Movetowards}]{towards,  }\item[{double}]{dis,  }\item[{double}]{speed\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+机械臂末端在工作空间中沿直线轨迹移动，会在起点和目标之间按照一条直线运动 
+
+
+\begin{DoxyParams}{参数}
+{\em towards} & 移动方向 \\
+\hline
+{\em dis} & 移动距离(m) \\
+\hline
+{\em speed\+\_\+factor} & 移动速度缩放系数(0,1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_aa9f9d10f9ca890e1f2df1f17d8a277da}\label{classur5e__action_aa9f9d10f9ca890e1f2df1f17d8a277da}} 
+\index{ur5e\_action@{ur5e\_action}!RecordCurrSequence@{RecordCurrSequence}}
+\index{RecordCurrSequence@{RecordCurrSequence}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{RecordCurrSequence()}{RecordCurrSequence()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Record\+Curr\+Sequence (\begin{DoxyParamCaption}\item[{double}]{speed,  }\item[{double}]{acc,  }\item[{string}]{planner }\end{DoxyParamCaption})}
+
+
+
+记录当前位置到下一位置的轨迹规划信息 
+
+
+\begin{DoxyParams}{参数}
+{\em speed} & 当前执行轨迹的速度 \\
+\hline
+{\em acc} & 当前执行轨迹的加速度 \\
+\hline
+{\em planner} & 当前执行轨迹的规划器 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_ac9bdae6b6f7056962d063ad6566cadfa}\label{classur5e__action_ac9bdae6b6f7056962d063ad6566cadfa}} 
+\index{ur5e\_action@{ur5e\_action}!RecordSequence@{RecordSequence}}
+\index{RecordSequence@{RecordSequence}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{RecordSequence()}{RecordSequence()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Record\+Sequence (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{vector$<$ string $>$}]{V\+\_\+name,  }\item[{vector$<$ double $>$}]{V\+\_\+radius,  }\item[{vector$<$ double $>$}]{V\+\_\+speed,  }\item[{vector$<$ double $>$}]{V\+\_\+acc,  }\item[{vector$<$ string $>$}]{V\+\_\+planner }\end{DoxyParamCaption})}
+
+
+
+记录上一次轨迹规划的信息 
+
+
+\begin{DoxyParams}{参数}
+{\em i} & 下一个目标路径点的索引 \\
+\hline
+{\em V\+\_\+name} & 当前执行轨迹的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 当前执行轨迹的混合半径 \\
+\hline
+{\em V\+\_\+speed} & 当前执行轨迹的速度 \\
+\hline
+{\em V\+\_\+acc} & 当前执行轨迹的加速度 \\
+\hline
+{\em V\+\_\+planner} & 当前执行轨迹的规划器 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_aa4cadcab5026f74ef0b1c191b02b1fd0}\label{classur5e__action_aa4cadcab5026f74ef0b1c191b02b1fd0}} 
+\index{ur5e\_action@{ur5e\_action}!ResetArm@{ResetArm}}
+\index{ResetArm@{ResetArm}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{ResetArm()}{ResetArm()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Reset\+Arm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+异常情况下复位机械臂。该函数会倒序执行存储的路径点和夹爪操作，直到末端没有夹持物体且到达安全位置。若在恢复过程中出现异常，会停止运动并杀死机械臂节点。此时需要人工介入。 
+
+\mbox{\Hypertarget{classur5e__action_a5e40f668e7f1cf9372a4956fe0a89402}\label{classur5e__action_a5e40f668e7f1cf9372a4956fe0a89402}} 
+\index{ur5e\_action@{ur5e\_action}!SaveMode@{SaveMode}}
+\index{SaveMode@{SaveMode}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SaveMode()}{SaveMode()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Save\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+站点信息记录中的\+Save模式,此模式下输入名称会调用\+Save\+Station\+Joint()或\+Save\+Station\+Pose()来保存信息至对应json文件.(T\+O\+DO) 
+
+\mbox{\Hypertarget{classur5e__action_a378c814e03cda04dadcf83264b0623f8}\label{classur5e__action_a378c814e03cda04dadcf83264b0623f8}} 
+\index{ur5e\_action@{ur5e\_action}!SaveStationInfo@{SaveStationInfo}}
+\index{SaveStationInfo@{SaveStationInfo}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SaveStationInfo()}{SaveStationInfo()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Save\+Station\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{station,  }\item[{bool}]{is\+Joint }\end{DoxyParamCaption})}
+
+
+
+站点信息记录主函数,包含\+Save模式和\+Go模式(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em station} & 站点名称 \\
+\hline
+{\em is\+Joint} & 选择记录关节角还是位姿 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a11caa08f40143a24344b3983d72876be}\label{classur5e__action_a11caa08f40143a24344b3983d72876be}} 
+\index{ur5e\_action@{ur5e\_action}!SaveStationJoint@{SaveStationJoint}}
+\index{SaveStationJoint@{SaveStationJoint}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SaveStationJoint()}{SaveStationJoint()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Save\+Station\+Joint (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+path,  }\item[{string}]{name,  }\item[{vector$<$ double $>$}]{joints }\end{DoxyParamCaption})}
+
+
+
+记录当前关节角到对应json文件中(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em file\+\_\+path} & 需要写入的json文件路径 \\
+\hline
+{\em name} & 关节角名称 \\
+\hline
+{\em joints} & 关节角数值 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_af2dc61569bcccae269d7bbb5f7a88031}\label{classur5e__action_af2dc61569bcccae269d7bbb5f7a88031}} 
+\index{ur5e\_action@{ur5e\_action}!SaveStationPose@{SaveStationPose}}
+\index{SaveStationPose@{SaveStationPose}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SaveStationPose()}{SaveStationPose()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Save\+Station\+Pose (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+path,  }\item[{string}]{name,  }\item[{Vector3d}]{X,  }\item[{Quaterniond}]{Q }\end{DoxyParamCaption})}
+
+
+
+记录当前位姿到对应json文件中(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em file\+\_\+path} & 需要写入的json文件路径 \\
+\hline
+{\em name} & 位姿名称 \\
+\hline
+{\em X} & 位姿平移 \\
+\hline
+{\em Q} & 位姿旋转四元数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a93700c0ac3dfaff311bf7dfa0df177b0}\label{classur5e__action_a93700c0ac3dfaff311bf7dfa0df177b0}} 
+\index{ur5e\_action@{ur5e\_action}!SequenceMove\_pilz@{SequenceMove\_pilz}}
+\index{SequenceMove\_pilz@{SequenceMove\_pilz}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SequenceMove\_pilz()}{SequenceMove\_pilz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Sequence\+Move\+\_\+pilz (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{V\+\_\+name,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+radius,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+speed,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+acc,  }\item[{vector$<$ string $>$ \&}]{V\+\_\+planner,  }\item[{bool}]{validate,  }\item[{bool}]{record }\end{DoxyParamCaption})}
+
+
+
+根据设定的操作进行移动 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 需要经过的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 指定每个路点的融合半径系数(0,1)(最后一个路径点必须为0)。如下图所示,真实融合半径=融合半径系数$\ast$min($\vert$$\vert$\+Pm-\/1\+Pm$\vert$$\vert$,$\vert$$\vert$\+Pm\+Pm+1$\vert$$\vert$)  \\
+\hline
+{\em V\+\_\+speed} & 指定每个路点的速度缩放系数(0,1\mbox{]}。实际运动速度=速度缩放系数$\ast$最大运动速度 \\
+\hline
+{\em V\+\_\+acc} & 指定每个路点的加速度缩放系数(0,1\mbox{]}。实际运动加速度=加速度缩放系数$\ast$最大运动加速度 \\
+\hline
+{\em V\+\_\+planner} & 指定每个路点的规划器(\+P\+T\+P,\+L\+I\+N)。\+P\+T\+P为点到点规划，\+L\+I\+N为直线规划 \\
+\hline
+{\em validate} & 是否只是验证该轨迹可行（该参数已被抛弃） \\
+\hline
+{\em record} & 是否实时记录末端到达了哪个路径点 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a36ab23887ca5db426913b25f10089dc5}\label{classur5e__action_a36ab23887ca5db426913b25f10089dc5}} 
+\index{ur5e\_action@{ur5e\_action}!SequenceMove\_pilz@{SequenceMove\_pilz}}
+\index{SequenceMove\_pilz@{SequenceMove\_pilz}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SequenceMove\_pilz()}{SequenceMove\_pilz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Sequence\+Move\+\_\+pilz (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{V\+\_\+name,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+radius,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+speed,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+acc,  }\item[{vector$<$ string $>$ \&}]{V\+\_\+planner,  }\item[{bool}]{validate,  }\item[{bool}]{record,  }\item[{std\+::string}]{speedprofile }\end{DoxyParamCaption})}
+
+
+
+根据设定的操作进行移动(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 需要经过的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 指定每个路点的融合半径系数(0,1)(最后一个路径点必须为0)。如下图所示,真实融合半径=融合半径系数$\ast$min($\vert$$\vert$\+Pm-\/1\+Pm$\vert$$\vert$,$\vert$$\vert$\+Pm\+Pm+1$\vert$$\vert$)  \\
+\hline
+{\em V\+\_\+speed} & 指定每个路点的速度缩放系数(0,1\mbox{]}。实际运动速度=速度缩放系数$\ast$最大运动速度 \\
+\hline
+{\em V\+\_\+acc} & 指定每个路点的加速度缩放系数(0,1\mbox{]}。实际运动加速度=加速度缩放系数$\ast$最大运动加速度 \\
+\hline
+{\em V\+\_\+planner} & 指定每个路点的规划器(\+P\+T\+P,\+L\+I\+N,\+C\+R\+I\+C)。\+P\+T\+P为点到点轨迹规划，\+L\+I\+N为直线轨迹规划，\+C\+I\+R\+C为圆弧轨迹规划 \\
+\hline
+{\em validate} & 是否只是验证该轨迹可行（该参数已被抛弃） \\
+\hline
+{\em record} & 是否实时记录末端到达了哪个路径点 \\
+\hline
+{\em speedprofile} & 选择速度轮廓曲线(trap,double\+S)。trap为梯形速度规划，double\+S为双\+S形速度规划 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a0b329f760419d9004ae5d8119b64bcf9}\label{classur5e__action_a0b329f760419d9004ae5d8119b64bcf9}} 
+\index{ur5e\_action@{ur5e\_action}!SequenceValidate\_pilz@{SequenceValidate\_pilz}}
+\index{SequenceValidate\_pilz@{SequenceValidate\_pilz}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SequenceValidate\_pilz()}{SequenceValidate\_pilz()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Sequence\+Validate\+\_\+pilz (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ string $>$ $\ast$ $>$}]{V\+\_\+name,  }\item[{vector$<$ vector$<$ double $>$ $\ast$ $>$}]{V\+\_\+radius,  }\item[{vector$<$ vector$<$ double $>$ $\ast$ $>$}]{V\+\_\+speed,  }\item[{vector$<$ vector$<$ double $>$ $\ast$ $>$}]{V\+\_\+acc,  }\item[{vector$<$ vector$<$ string $>$ $\ast$ $>$}]{V\+\_\+planner }\end{DoxyParamCaption})}
+
+
+
+验证给定的多个操作是否可行 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 多个需要经过的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 多个路点的融合半径系数(0,1)(最后一个路径点必须为0) \\
+\hline
+{\em V\+\_\+speed} & 多个路点的速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+acc} & 多个路点的加速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+planner} & 多个路点的规划器(\+P\+T\+P,\+L\+I\+N) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a9cf1c33ea233f87a17bba5d10c6a89af}\label{classur5e__action_a9cf1c33ea233f87a17bba5d10c6a89af}} 
+\index{ur5e\_action@{ur5e\_action}!setAvgCartesianSpeed@{setAvgCartesianSpeed}}
+\index{setAvgCartesianSpeed@{setAvgCartesianSpeed}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{setAvgCartesianSpeed()}{setAvgCartesianSpeed()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::set\+Avg\+Cartesian\+Speed (\begin{DoxyParamCaption}\item[{moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface\+::\+Plan \&}]{plan,  }\item[{const string}]{end\+\_\+effector,  }\item[{const double}]{speed }\end{DoxyParamCaption})}
+
+
+
+设定笛卡尔轨迹的末端速度,已弃用 
+
+
+\begin{DoxyParams}{参数}
+{\em plan} & 需要设定速度的plan \\
+\hline
+{\em end\+\_\+effector} & 指定末端link \\
+\hline
+{\em speed} & 设定的末端速度(m/s) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_a1a5c88e72caca35acae5b20528972c47}\label{classur5e__action_a1a5c88e72caca35acae5b20528972c47}} 
+\index{ur5e\_action@{ur5e\_action}!SwitchMode@{SwitchMode}}
+\index{SwitchMode@{SwitchMode}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{SwitchMode()}{SwitchMode()}}
+{\footnotesize\ttfamily void ur5e\+\_\+action\+::\+Switch\+Mode (\begin{DoxyParamCaption}\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+用于切换模式(\+T\+O\+D\+O) 
+
+
+\begin{DoxyParams}{参数}
+{\em mode} & 0为\+Save模式(默认),1为\+Go模式. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classur5e__action_add23fff627124eee583cb8e18ebcfb35}\label{classur5e__action_add23fff627124eee583cb8e18ebcfb35}} 
+\index{ur5e\_action@{ur5e\_action}!ValidateOneReq@{ValidateOneReq}}
+\index{ValidateOneReq@{ValidateOneReq}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{ValidateOneReq()}{ValidateOneReq()}}
+{\footnotesize\ttfamily int32\+\_\+t ur5e\+\_\+action\+::\+Validate\+One\+Req (\begin{DoxyParamCaption}\item[{vector$<$ string $>$ \&}]{V\+\_\+name,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+radius,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+speed,  }\item[{vector$<$ double $>$ \&}]{V\+\_\+acc,  }\item[{vector$<$ string $>$ \&}]{V\+\_\+planner }\end{DoxyParamCaption})}
+
+
+
+验证给定的单个操作是否可行(该操作在必要时会插入路径点) 
+
+
+\begin{DoxyParams}{参数}
+{\em V\+\_\+name} & 需要经过的路点名称 \\
+\hline
+{\em V\+\_\+radius} & 每个路点的融合半径系数(0,1)(最后一个路径点必须为0) \\
+\hline
+{\em V\+\_\+speed} & 每个路点的速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+acc} & 每个路点的加速度系数(0,1\mbox{]} \\
+\hline
+{\em V\+\_\+planner} & 每个路点的规划器(\+P\+T\+P,\+L\+I\+N) \\
+\hline
+{\em validate} & 是否仅验证该操作是否可行 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{类成员变量说明}
+\mbox{\Hypertarget{classur5e__action_accbd5fe90ea2b7b0eb08a344656f3159}\label{classur5e__action_accbd5fe90ea2b7b0eb08a344656f3159}} 
+\index{ur5e\_action@{ur5e\_action}!\_CTF\_pose@{\_CTF\_pose}}
+\index{\_CTF\_pose@{\_CTF\_pose}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{\_CTF\_pose}{\_CTF\_pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose ur5e\+\_\+action\+::\+\_\+\+C\+T\+F\+\_\+pose}
+
+
+
+离心机标签位姿 
+
+\mbox{\Hypertarget{classur5e__action_a6e884c93bc8e326b2e6038bb928acfcd}\label{classur5e__action_a6e884c93bc8e326b2e6038bb928acfcd}} 
+\index{ur5e\_action@{ur5e\_action}!\_curr\_station@{\_curr\_station}}
+\index{\_curr\_station@{\_curr\_station}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{\_curr\_station}{\_curr\_station}}
+{\footnotesize\ttfamily string ur5e\+\_\+action\+::\+\_\+curr\+\_\+station}
+
+
+
+机器人当前站点 
+
+\mbox{\Hypertarget{classur5e__action_aad5e154581680c4aed973b938d526268}\label{classur5e__action_aad5e154581680c4aed973b938d526268}} 
+\index{ur5e\_action@{ur5e\_action}!\_dbptr@{\_dbptr}}
+\index{\_dbptr@{\_dbptr}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{\_dbptr}{\_dbptr}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\mbox{\hyperlink{classdashboardsrv__client}{dashboardsrv\+\_\+client}}$>$ ur5e\+\_\+action\+::\+\_\+dbptr}
+
+
+
+U\+R5e的dashboard客户端,用于远程启动\+U\+R5e,加载远程控制程序 
+
+\mbox{\Hypertarget{classur5e__action_a0db5fcc23978e2575473fb765388f202}\label{classur5e__action_a0db5fcc23978e2575473fb765388f202}} 
+\index{ur5e\_action@{ur5e\_action}!\_file\_root@{\_file\_root}}
+\index{\_file\_root@{\_file\_root}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{\_file\_root}{\_file\_root}}
+{\footnotesize\ttfamily string ur5e\+\_\+action\+::\+\_\+file\+\_\+root}
+
+
+
+存放站点位姿信息文件的路径 
+
+\mbox{\Hypertarget{classur5e__action_a15648fe2df899f073a9787865dea8e0d}\label{classur5e__action_a15648fe2df899f073a9787865dea8e0d}} 
+\index{ur5e\_action@{ur5e\_action}!\_mgptr@{\_mgptr}}
+\index{\_mgptr@{\_mgptr}!ur5e\_action@{ur5e\_action}}
+\doxyparagraph{\texorpdfstring{\_mgptr}{\_mgptr}}
+{\footnotesize\ttfamily moveit\+::planning\+\_\+interface\+::\+Move\+Group\+Interface\+Ptr ur5e\+\_\+action\+::\+\_\+mgptr}
+
+
+
+moveit movegroup 指针 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+motion\+\_\+planning.\+h\item 
+motion\+\_\+planning.\+cpp\item 
+motion\+\_\+planning\+\_\+util.\+cpp\end{DoxyCompactItemize}

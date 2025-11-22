@@ -1,0 +1,1615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>chemicalrobot_arm: ur5e_action类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">chemicalrobot_arm
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../df/dbc/classur5e__action-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ur5e_action类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>机器人化学家机械臂部分主要模块  
+ <a href="../../d8/d3e/classur5e__action.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../dc/d9a/motion__planning_8h_source.html">motion_planning.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1cad5a2ed2832ddcebf94cbe706483bc"><td class="memItemLeft" align="right" valign="top"><a id="a1cad5a2ed2832ddcebf94cbe706483bc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ur5e_action</b> (ros::NodeHandle nh, shared_ptr&lt; <a class="el" href="../../d1/d35/classdashboardsrv__client.html">dashboardsrv_client</a> &gt; dbptr, moveit::planning_interface::MoveGroupInterfacePtr mgptr)</td></tr>
+<tr class="separator:a1cad5a2ed2832ddcebf94cbe706483bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd89dc36c944310cddfde5b7faa018f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#abd89dc36c944310cddfde5b7faa018f5">LoadStationInfo</a> (string station_name)</td></tr>
+<tr class="memdesc:abd89dc36c944310cddfde5b7faa018f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">载入特定站点的结构化信息（关节角和位姿）(注意：该函数只在机械臂复位后才会调用，所以需要在站点操作前发送复位指令)  <a href="../../d8/d3e/classur5e__action.html#abd89dc36c944310cddfde5b7faa018f5">更多...</a><br /></td></tr>
+<tr class="separator:abd89dc36c944310cddfde5b7faa018f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0404ee7c28bc225515a9aae89c63da69"><td class="memItemLeft" align="right" valign="top"><a id="a0404ee7c28bc225515a9aae89c63da69"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a0404ee7c28bc225515a9aae89c63da69">LoadRobotJointInfo</a> ()</td></tr>
+<tr class="memdesc:a0404ee7c28bc225515a9aae89c63da69"><td class="mdescLeft">&#160;</td><td class="mdescRight">载入机器人平台上的关节角 <br /></td></tr>
+<tr class="separator:a0404ee7c28bc225515a9aae89c63da69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65688d3b748f20626df515e6db0e0d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#ab65688d3b748f20626df515e6db0e0d4">ForceFeedback</a> (string name, double speed, double thre)</td></tr>
+<tr class="memdesc:ab65688d3b748f20626df515e6db0e0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">力反馈控制  <a href="../../d8/d3e/classur5e__action.html#ab65688d3b748f20626df515e6db0e0d4">更多...</a><br /></td></tr>
+<tr class="separator:ab65688d3b748f20626df515e6db0e0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e4a4f4c57e6a31e22d1ed1df04dc07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#aa9e4a4f4c57e6a31e22d1ed1df04dc07">Init</a> (const string filename)</td></tr>
+<tr class="memdesc:aa9e4a4f4c57e6a31e22d1ed1df04dc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化UR5e和夹爪,包括启动电源,释放制动器,加载远程控制程序(该函数要求UR5e处于远程控制模式)  <a href="../../d8/d3e/classur5e__action.html#aa9e4a4f4c57e6a31e22d1ed1df04dc07">更多...</a><br /></td></tr>
+<tr class="separator:aa9e4a4f4c57e6a31e22d1ed1df04dc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eff1fd587b459f5d62300e5b0a43dd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a6eff1fd587b459f5d62300e5b0a43dd3">GotoDefaultPose</a> (string name)</td></tr>
+<tr class="memdesc:a6eff1fd587b459f5d62300e5b0a43dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将机械臂移动到默认位姿  <a href="../../d8/d3e/classur5e__action.html#a6eff1fd587b459f5d62300e5b0a43dd3">更多...</a><br /></td></tr>
+<tr class="separator:a6eff1fd587b459f5d62300e5b0a43dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378c814e03cda04dadcf83264b0623f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a378c814e03cda04dadcf83264b0623f8">SaveStationInfo</a> (std::string station, bool isJoint)</td></tr>
+<tr class="memdesc:a378c814e03cda04dadcf83264b0623f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">站点信息记录主函数,包含Save模式和Go模式(TODO)  <a href="../../d8/d3e/classur5e__action.html#a378c814e03cda04dadcf83264b0623f8">更多...</a><br /></td></tr>
+<tr class="separator:a378c814e03cda04dadcf83264b0623f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5c88e72caca35acae5b20528972c47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a1a5c88e72caca35acae5b20528972c47">SwitchMode</a> (int mode)</td></tr>
+<tr class="memdesc:a1a5c88e72caca35acae5b20528972c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于切换模式(TODO)  <a href="../../d8/d3e/classur5e__action.html#a1a5c88e72caca35acae5b20528972c47">更多...</a><br /></td></tr>
+<tr class="separator:a1a5c88e72caca35acae5b20528972c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e40f668e7f1cf9372a4956fe0a89402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a5e40f668e7f1cf9372a4956fe0a89402">SaveMode</a> ()</td></tr>
+<tr class="memdesc:a5e40f668e7f1cf9372a4956fe0a89402"><td class="mdescLeft">&#160;</td><td class="mdescRight">站点信息记录中的Save模式,此模式下输入名称会调用SaveStationJoint()或SaveStationPose()来保存信息至对应json文件.(TODO)  <a href="../../d8/d3e/classur5e__action.html#a5e40f668e7f1cf9372a4956fe0a89402">更多...</a><br /></td></tr>
+<tr class="separator:a5e40f668e7f1cf9372a4956fe0a89402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3821aa1d301cc367f3e429fddac2bf13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a3821aa1d301cc367f3e429fddac2bf13">GoMode</a> ()</td></tr>
+<tr class="memdesc:a3821aa1d301cc367f3e429fddac2bf13"><td class="mdescLeft">&#160;</td><td class="mdescRight">站点信息记录中的Go模式,此模式下输入关节角或位姿名称就可以移动到对应位置.(TODO)  <a href="../../d8/d3e/classur5e__action.html#a3821aa1d301cc367f3e429fddac2bf13">更多...</a><br /></td></tr>
+<tr class="separator:a3821aa1d301cc367f3e429fddac2bf13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dc61569bcccae269d7bbb5f7a88031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#af2dc61569bcccae269d7bbb5f7a88031">SaveStationPose</a> (string file_path, string name, Vector3d X, Quaterniond Q)</td></tr>
+<tr class="memdesc:af2dc61569bcccae269d7bbb5f7a88031"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录当前位姿到对应json文件中(TODO)  <a href="../../d8/d3e/classur5e__action.html#af2dc61569bcccae269d7bbb5f7a88031">更多...</a><br /></td></tr>
+<tr class="separator:af2dc61569bcccae269d7bbb5f7a88031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11caa08f40143a24344b3983d72876be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a11caa08f40143a24344b3983d72876be">SaveStationJoint</a> (string file_path, string name, vector&lt; double &gt; joints)</td></tr>
+<tr class="memdesc:a11caa08f40143a24344b3983d72876be"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录当前关节角到对应json文件中(TODO)  <a href="../../d8/d3e/classur5e__action.html#a11caa08f40143a24344b3983d72876be">更多...</a><br /></td></tr>
+<tr class="separator:a11caa08f40143a24344b3983d72876be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95739ae48e076bcd233baf4a6116cc7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a95739ae48e076bcd233baf4a6116cc7e">CommandExecute</a> (std::string station, std::string operation, int rack, int bottle, int rack_oper, int light_num, int paper, int dryer_num, int libs_num)</td></tr>
+<tr class="memdesc:a95739ae48e076bcd233baf4a6116cc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析并执行任务调度模块发送的指令(TODO)  <a href="../../d8/d3e/classur5e__action.html#a95739ae48e076bcd233baf4a6116cc7e">更多...</a><br /></td></tr>
+<tr class="separator:a95739ae48e076bcd233baf4a6116cc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d3d8b2e789508f05b02fdf18a98189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a75d3d8b2e789508f05b02fdf18a98189">MoveLine_pilz</a> (Movetowards towards, double dis, double speed_factor)</td></tr>
+<tr class="memdesc:a75d3d8b2e789508f05b02fdf18a98189"><td class="mdescLeft">&#160;</td><td class="mdescRight">机械臂末端在工作空间中沿直线轨迹移动，会在起点和目标之间按照一条直线运动  <a href="../../d8/d3e/classur5e__action.html#a75d3d8b2e789508f05b02fdf18a98189">更多...</a><br /></td></tr>
+<tr class="separator:a75d3d8b2e789508f05b02fdf18a98189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c20bb95f0c5b4519d9329f5d93837c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a11c20bb95f0c5b4519d9329f5d93837c">MoveCircle_pilz</a> (CirType type, std::string name, std::string goal)</td></tr>
+<tr class="memdesc:a11c20bb95f0c5b4519d9329f5d93837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">机械臂末端在工作空间中沿圆弧轨迹运动，需要指定圆心或中间点(TODO)  <a href="../../d8/d3e/classur5e__action.html#a11c20bb95f0c5b4519d9329f5d93837c">更多...</a><br /></td></tr>
+<tr class="separator:a11c20bb95f0c5b4519d9329f5d93837c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93700c0ac3dfaff311bf7dfa0df177b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a93700c0ac3dfaff311bf7dfa0df177b0">SequenceMove_pilz</a> (vector&lt; string &gt; &amp;V_name, vector&lt; double &gt; &amp;V_radius, vector&lt; double &gt; &amp;V_speed, vector&lt; double &gt; &amp;V_acc, vector&lt; string &gt; &amp;V_planner, bool validate, bool record)</td></tr>
+<tr class="memdesc:a93700c0ac3dfaff311bf7dfa0df177b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据设定的操作进行移动  <a href="../../d8/d3e/classur5e__action.html#a93700c0ac3dfaff311bf7dfa0df177b0">更多...</a><br /></td></tr>
+<tr class="separator:a93700c0ac3dfaff311bf7dfa0df177b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ab23887ca5db426913b25f10089dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a36ab23887ca5db426913b25f10089dc5">SequenceMove_pilz</a> (vector&lt; string &gt; &amp;V_name, vector&lt; double &gt; &amp;V_radius, vector&lt; double &gt; &amp;V_speed, vector&lt; double &gt; &amp;V_acc, vector&lt; string &gt; &amp;V_planner, bool validate, bool record, std::string speedprofile)</td></tr>
+<tr class="memdesc:a36ab23887ca5db426913b25f10089dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据设定的操作进行移动(TODO)  <a href="../../d8/d3e/classur5e__action.html#a36ab23887ca5db426913b25f10089dc5">更多...</a><br /></td></tr>
+<tr class="separator:a36ab23887ca5db426913b25f10089dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add23fff627124eee583cb8e18ebcfb35"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#add23fff627124eee583cb8e18ebcfb35">ValidateOneReq</a> (vector&lt; string &gt; &amp;V_name, vector&lt; double &gt; &amp;V_radius, vector&lt; double &gt; &amp;V_speed, vector&lt; double &gt; &amp;V_acc, vector&lt; string &gt; &amp;V_planner)</td></tr>
+<tr class="memdesc:add23fff627124eee583cb8e18ebcfb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">验证给定的单个操作是否可行(该操作在必要时会插入路径点)  <a href="../../d8/d3e/classur5e__action.html#add23fff627124eee583cb8e18ebcfb35">更多...</a><br /></td></tr>
+<tr class="separator:add23fff627124eee583cb8e18ebcfb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b329f760419d9004ae5d8119b64bcf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a0b329f760419d9004ae5d8119b64bcf9">SequenceValidate_pilz</a> (vector&lt; vector&lt; string &gt; * &gt; V_name, vector&lt; vector&lt; double &gt; * &gt; V_radius, vector&lt; vector&lt; double &gt; * &gt; V_speed, vector&lt; vector&lt; double &gt; * &gt; V_acc, vector&lt; vector&lt; string &gt; * &gt; V_planner)</td></tr>
+<tr class="memdesc:a0b329f760419d9004ae5d8119b64bcf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">验证给定的多个操作是否可行  <a href="../../d8/d3e/classur5e__action.html#a0b329f760419d9004ae5d8119b64bcf9">更多...</a><br /></td></tr>
+<tr class="separator:a0b329f760419d9004ae5d8119b64bcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3719b47c3443eb441d5054d470c0a817"><td class="memItemLeft" align="right" valign="top">moveit_msgs::MotionSequenceRequest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a3719b47c3443eb441d5054d470c0a817">ConstructSeqReq</a> (vector&lt; string &gt; &amp;V_name, vector&lt; double &gt; &amp;V_radius, vector&lt; double &gt; &amp;V_speed, vector&lt; double &gt; &amp;V_acc, vector&lt; string &gt; &amp;V_planner, bool validate)</td></tr>
+<tr class="memdesc:a3719b47c3443eb441d5054d470c0a817"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据给定的操作，构造轨迹规划的request  <a href="../../d8/d3e/classur5e__action.html#a3719b47c3443eb441d5054d470c0a817">更多...</a><br /></td></tr>
+<tr class="separator:a3719b47c3443eb441d5054d470c0a817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4cadcab5026f74ef0b1c191b02b1fd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#aa4cadcab5026f74ef0b1c191b02b1fd0">ResetArm</a> ()</td></tr>
+<tr class="memdesc:aa4cadcab5026f74ef0b1c191b02b1fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常情况下复位机械臂。该函数会倒序执行存储的路径点和夹爪操作，直到末端没有夹持物体且到达安全位置。若在恢复过程中出现异常，会停止运动并杀死机械臂节点。此时需要人工介入。  <a href="../../d8/d3e/classur5e__action.html#aa4cadcab5026f74ef0b1c191b02b1fd0">更多...</a><br /></td></tr>
+<tr class="separator:aa4cadcab5026f74ef0b1c191b02b1fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203d1efd2d8637359e246b7f17bc6b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a203d1efd2d8637359e246b7f17bc6b68">Gripper_op</a> (uint16_t position, bool check=false, bool block=false, uint16_t force=20, uint16_t speed=50)</td></tr>
+<tr class="memdesc:a203d1efd2d8637359e246b7f17bc6b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制夹爪闭合和张开,并检查是否夹持有物体  <a href="../../d8/d3e/classur5e__action.html#a203d1efd2d8637359e246b7f17bc6b68">更多...</a><br /></td></tr>
+<tr class="separator:a203d1efd2d8637359e246b7f17bc6b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb35064d8869e2748113ab66c4c864fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#adb35064d8869e2748113ab66c4c864fa">JsonPub</a> (vector&lt; string &gt; msgs={&quot;YES&quot;, &quot;&quot;}, vector&lt; double &gt; relocation_err={}, vector&lt; int &gt; exception_bottle={}, int rack_absnum=0)</td></tr>
+<tr class="memdesc:adb35064d8869e2748113ab66c4c864fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作状态反馈,向上位机发布/obsOperation_out话题  <a href="../../d8/d3e/classur5e__action.html#adb35064d8869e2748113ab66c4c864fa">更多...</a><br /></td></tr>
+<tr class="separator:adb35064d8869e2748113ab66c4c864fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf1c33ea233f87a17bba5d10c6a89af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a9cf1c33ea233f87a17bba5d10c6a89af">setAvgCartesianSpeed</a> (moveit::planning_interface::MoveGroupInterface::Plan &amp;plan, const string end_effector, const double speed)</td></tr>
+<tr class="memdesc:a9cf1c33ea233f87a17bba5d10c6a89af"><td class="mdescLeft">&#160;</td><td class="mdescRight">设定笛卡尔轨迹的末端速度,已弃用  <a href="../../d8/d3e/classur5e__action.html#a9cf1c33ea233f87a17bba5d10c6a89af">更多...</a><br /></td></tr>
+<tr class="separator:a9cf1c33ea233f87a17bba5d10c6a89af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4055e134c059ae9d11f59323c50648b"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#ac4055e134c059ae9d11f59323c50648b">CalculatePoses</a> (string station_name)</td></tr>
+<tr class="memdesc:ac4055e134c059ae9d11f59323c50648b"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前站点的标签位姿计算相对基座位姿(用于重定位之后)  <a href="../../d8/d3e/classur5e__action.html#ac4055e134c059ae9d11f59323c50648b">更多...</a><br /></td></tr>
+<tr class="separator:ac4055e134c059ae9d11f59323c50648b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00d9dc758ea7b9c6be95eddb8a92c4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#af00d9dc758ea7b9c6be95eddb8a92c4a">InsertPoses</a> (vector&lt; string &gt; &amp;V_name)</td></tr>
+<tr class="memdesc:af00d9dc758ea7b9c6be95eddb8a92c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据给定的路径点序列插入路径点  <a href="../../d8/d3e/classur5e__action.html#af00d9dc758ea7b9c6be95eddb8a92c4a">更多...</a><br /></td></tr>
+<tr class="separator:af00d9dc758ea7b9c6be95eddb8a92c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5546ae456113d7eaaf1902da43543fce"><td class="memItemLeft" align="right" valign="top"><a id="a5546ae456113d7eaaf1902da43543fce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a5546ae456113d7eaaf1902da43543fce">obs_Callback</a> (const std_msgs::StringConstPtr &amp;obsOperation_in)</td></tr>
+<tr class="memdesc:a5546ae456113d7eaaf1902da43543fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅/obsOperation_in的回调函数,接收上位机指令进行对应操作 <br /></td></tr>
+<tr class="separator:a5546ae456113d7eaaf1902da43543fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99f5949ee592d5eee9639dd750d5fc2"><td class="memItemLeft" align="right" valign="top"><a id="ac99f5949ee592d5eee9639dd750d5fc2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#ac99f5949ee592d5eee9639dd750d5fc2">safety_Callback</a> (const ur_dashboard_msgs::SafetyModeConstPtr &amp;safetymode)</td></tr>
+<tr class="memdesc:ac99f5949ee592d5eee9639dd750d5fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅/ur_hardware_interface/safety_mode的回调函数,解除保护性停止 <br /></td></tr>
+<tr class="separator:ac99f5949ee592d5eee9639dd750d5fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7d6b7fec5e54b24bc4eb730015609c"><td class="memItemLeft" align="right" valign="top"><a id="acf7d6b7fec5e54b24bc4eb730015609c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#acf7d6b7fec5e54b24bc4eb730015609c">exec_Callback</a> (const moveit_msgs::ExecuteTrajectoryActionResultConstPtr &amp;execresult)</td></tr>
+<tr class="memdesc:acf7d6b7fec5e54b24bc4eb730015609c"><td class="mdescLeft">&#160;</td><td class="mdescRight">订阅/execute_trajectory/result的回调函数,实时获取轨迹执行结果 <br /></td></tr>
+<tr class="separator:acf7d6b7fec5e54b24bc4eb730015609c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bdae6b6f7056962d063ad6566cadfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#ac9bdae6b6f7056962d063ad6566cadfa">RecordSequence</a> (size_t &amp;i, vector&lt; string &gt; V_name, vector&lt; double &gt; V_radius, vector&lt; double &gt; V_speed, vector&lt; double &gt; V_acc, vector&lt; string &gt; V_planner)</td></tr>
+<tr class="memdesc:ac9bdae6b6f7056962d063ad6566cadfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录上一次轨迹规划的信息  <a href="../../d8/d3e/classur5e__action.html#ac9bdae6b6f7056962d063ad6566cadfa">更多...</a><br /></td></tr>
+<tr class="separator:ac9bdae6b6f7056962d063ad6566cadfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f9d10f9ca890e1f2df1f17d8a277da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#aa9f9d10f9ca890e1f2df1f17d8a277da">RecordCurrSequence</a> (double speed, double acc, string planner)</td></tr>
+<tr class="memdesc:aa9f9d10f9ca890e1f2df1f17d8a277da"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录当前位置到下一位置的轨迹规划信息  <a href="../../d8/d3e/classur5e__action.html#aa9f9d10f9ca890e1f2df1f17d8a277da">更多...</a><br /></td></tr>
+<tr class="separator:aa9f9d10f9ca890e1f2df1f17d8a277da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af421219a79e320d9a688adb7df830486"><td class="memItemLeft" align="right" valign="top"><a id="af421219a79e320d9a688adb7df830486"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#af421219a79e320d9a688adb7df830486">ClearSequence</a> ()</td></tr>
+<tr class="memdesc:af421219a79e320d9a688adb7df830486"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据夹持状态和当前末端位置清空已记录的路径点 <br /></td></tr>
+<tr class="separator:af421219a79e320d9a688adb7df830486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1213819dafa025702c844387ffdc65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#afd1213819dafa025702c844387ffdc65">GetNextpose</a> (string name, moveit_msgs::Constraints &amp;pose_goal, geometry_msgs::PoseStamped &amp;next_pose)</td></tr>
+<tr class="memdesc:afd1213819dafa025702c844387ffdc65"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据指定名称,计算下一个目标位置和约束  <a href="../../d8/d3e/classur5e__action.html#afd1213819dafa025702c844387ffdc65">更多...</a><br /></td></tr>
+<tr class="separator:afd1213819dafa025702c844387ffdc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba99724f414e9c0a92ab9e4634e0305"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a7ba99724f414e9c0a92ab9e4634e0305">GetBlendradius</a> (geometry_msgs::Pose curr_pose, geometry_msgs::Pose next_pose, geometry_msgs::Pose n_next_pose)</td></tr>
+<tr class="memdesc:a7ba99724f414e9c0a92ab9e4634e0305"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前位置,目标位置和下一位置计算融合半径  <a href="../../d8/d3e/classur5e__action.html#a7ba99724f414e9c0a92ab9e4634e0305">更多...</a><br /></td></tr>
+<tr class="separator:a7ba99724f414e9c0a92ab9e4634e0305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38599b94f944da9b0d69358910e20f80"><td class="memItemLeft" align="right" valign="top">vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a38599b94f944da9b0d69358910e20f80">GetJoints</a> (string name)</td></tr>
+<tr class="memdesc:a38599b94f944da9b0d69358910e20f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">从_Init_joints和_Robot_joints中获取关节角  <a href="../../d8/d3e/classur5e__action.html#a38599b94f944da9b0d69358910e20f80">更多...</a><br /></td></tr>
+<tr class="separator:a38599b94f944da9b0d69358910e20f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a15648fe2df899f073a9787865dea8e0d"><td class="memItemLeft" align="right" valign="top">moveit::planning_interface::MoveGroupInterfacePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a15648fe2df899f073a9787865dea8e0d">_mgptr</a></td></tr>
+<tr class="memdesc:a15648fe2df899f073a9787865dea8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">moveit movegroup 指针  <a href="../../d8/d3e/classur5e__action.html#a15648fe2df899f073a9787865dea8e0d">更多...</a><br /></td></tr>
+<tr class="separator:a15648fe2df899f073a9787865dea8e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5e154581680c4aed973b938d526268"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="../../d1/d35/classdashboardsrv__client.html">dashboardsrv_client</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#aad5e154581680c4aed973b938d526268">_dbptr</a></td></tr>
+<tr class="memdesc:aad5e154581680c4aed973b938d526268"><td class="mdescLeft">&#160;</td><td class="mdescRight">UR5e的dashboard客户端,用于远程启动UR5e,加载远程控制程序  <a href="../../d8/d3e/classur5e__action.html#aad5e154581680c4aed973b938d526268">更多...</a><br /></td></tr>
+<tr class="separator:aad5e154581680c4aed973b938d526268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db5fcc23978e2575473fb765388f202"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a0db5fcc23978e2575473fb765388f202">_file_root</a></td></tr>
+<tr class="memdesc:a0db5fcc23978e2575473fb765388f202"><td class="mdescLeft">&#160;</td><td class="mdescRight">存放站点位姿信息文件的路径  <a href="../../d8/d3e/classur5e__action.html#a0db5fcc23978e2575473fb765388f202">更多...</a><br /></td></tr>
+<tr class="separator:a0db5fcc23978e2575473fb765388f202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e884c93bc8e326b2e6038bb928acfcd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#a6e884c93bc8e326b2e6038bb928acfcd">_curr_station</a></td></tr>
+<tr class="memdesc:a6e884c93bc8e326b2e6038bb928acfcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人当前站点  <a href="../../d8/d3e/classur5e__action.html#a6e884c93bc8e326b2e6038bb928acfcd">更多...</a><br /></td></tr>
+<tr class="separator:a6e884c93bc8e326b2e6038bb928acfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbd5fe90ea2b7b0eb08a344656f3159"><td class="memItemLeft" align="right" valign="top">geometry_msgs::Pose&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3e/classur5e__action.html#accbd5fe90ea2b7b0eb08a344656f3159">_CTF_pose</a></td></tr>
+<tr class="memdesc:accbd5fe90ea2b7b0eb08a344656f3159"><td class="mdescLeft">&#160;</td><td class="mdescRight">离心机标签位姿  <a href="../../d8/d3e/classur5e__action.html#accbd5fe90ea2b7b0eb08a344656f3159">更多...</a><br /></td></tr>
+<tr class="separator:accbd5fe90ea2b7b0eb08a344656f3159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>机器人化学家机械臂部分主要模块 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ac4055e134c059ae9d11f59323c50648b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4055e134c059ae9d11f59323c50648b">&#9670;&nbsp;</a></span>CalculatePoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Isometry3d ur5e_action::CalculatePoses </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>station_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据当前站点的标签位姿计算相对基座位姿(用于重定位之后) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">station_name</td><td>当前站点名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>标签位姿 </dd></dl>
+
+</div>
+</div>
+<a id="a95739ae48e076bcd233baf4a6116cc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95739ae48e076bcd233baf4a6116cc7e">&#9670;&nbsp;</a></span>CommandExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::CommandExecute </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>station</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bottle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rack_oper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>light_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>paper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dryer_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>libs_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解析并执行任务调度模块发送的指令(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">station</td><td>工作站名称 </td></tr>
+    <tr><td class="paramname">operation</td><td>操作名称 </td></tr>
+    <tr><td class="paramname">rack</td><td>机器人平台上的试管架编号 </td></tr>
+    <tr><td class="paramname">bottle</td><td>试管架上的试管编号 </td></tr>
+    <tr><td class="paramname">rack_oper</td><td>起始样品架,回收样品架的试管架编号 </td></tr>
+    <tr><td class="paramname">light_num</td><td>光催化位置编号 </td></tr>
+    <tr><td class="paramname">paper</td><td>电催化碳纸编号 </td></tr>
+    <tr><td class="paramname">dryer_num</td><td>烘干机位置编号 </td></tr>
+    <tr><td class="paramname">libs_num</td><td>libs样品编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3719b47c3443eb441d5054d470c0a817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3719b47c3443eb441d5054d470c0a817">&#9670;&nbsp;</a></span>ConstructSeqReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">moveit_msgs::MotionSequenceRequest ur5e_action::ConstructSeqReq </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_planner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>validate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据给定的操作，构造轨迹规划的request </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>需要经过的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>每个路点的融合半径系数(0,1)(最后一个路径点必须为0) </td></tr>
+    <tr><td class="paramname">V_speed</td><td>每个路点的速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_acc</td><td>每个路点的加速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_planner</td><td>每个路点的规划器(PTP,LIN) </td></tr>
+    <tr><td class="paramname">validate</td><td>是否仅验证该操作是否可行 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>moveit_msgs::MotionSequenceRequest 构造得到的轨迹规划request </dd></dl>
+
+</div>
+</div>
+<a id="ab65688d3b748f20626df515e6db0e0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65688d3b748f20626df515e6db0e0d4">&#9670;&nbsp;</a></span>ForceFeedback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::ForceFeedback </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>thre</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>力反馈控制 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>目标位姿 </td></tr>
+    <tr><td class="paramname">speed</td><td>移动速度系数，建议0.01，以便有足够时间反应 </td></tr>
+    <tr><td class="paramname">thre</td><td>力矩阈值，超过此阈值会停止移动 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ba99724f414e9c0a92ab9e4634e0305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba99724f414e9c0a92ab9e4634e0305">&#9670;&nbsp;</a></span>GetBlendradius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ur5e_action::GetBlendradius </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Pose&#160;</td>
+          <td class="paramname"><em>curr_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Pose&#160;</td>
+          <td class="paramname"><em>next_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Pose&#160;</td>
+          <td class="paramname"><em>n_next_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据当前位置,目标位置和下一位置计算融合半径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">curr_pose</td><td>当前位置 </td></tr>
+    <tr><td class="paramname">next_pose</td><td>目标位置 </td></tr>
+    <tr><td class="paramname">n_next_pose</td><td>目标位置的下一位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a38599b94f944da9b0d69358910e20f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38599b94f944da9b0d69358910e20f80">&#9670;&nbsp;</a></span>GetJoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; double &gt; ur5e_action::GetJoints </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从_Init_joints和_Robot_joints中获取关节角 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">关节角的名字</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd1213819dafa025702c844387ffdc65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1213819dafa025702c844387ffdc65">&#9670;&nbsp;</a></span>GetNextpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::GetNextpose </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">moveit_msgs::Constraints &amp;&#160;</td>
+          <td class="paramname"><em>pose_goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>next_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据指定名称,计算下一个目标位置和约束 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>指定路点名,"J"开头则为关节角,"P"开头则为位置 </td></tr>
+    <tr><td class="paramname">pose_goal</td><td>需要构造的目标约束 </td></tr>
+    <tr><td class="paramname">next_pose</td><td>需要构造的目标位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3821aa1d301cc367f3e429fddac2bf13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3821aa1d301cc367f3e429fddac2bf13">&#9670;&nbsp;</a></span>GoMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::GoMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>站点信息记录中的Go模式,此模式下输入关节角或位姿名称就可以移动到对应位置.(TODO) </p>
+
+</div>
+</div>
+<a id="a6eff1fd587b459f5d62300e5b0a43dd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eff1fd587b459f5d62300e5b0a43dd3">&#9670;&nbsp;</a></span>GotoDefaultPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ur5e_action::GotoDefaultPose </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将机械臂移动到默认位姿 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>指定需要移动的关节角 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a203d1efd2d8637359e246b7f17bc6b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203d1efd2d8637359e246b7f17bc6b68">&#9670;&nbsp;</a></span>Gripper_op()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::Gripper_op </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>check</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>block</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>force</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>speed</em> = <code>50</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>控制夹爪闭合和张开,并检查是否夹持有物体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>夹爪闭合位置(0:完全打开,1000:完全闭合) </td></tr>
+    <tr><td class="paramname">check</td><td>是否检查夹持到物体 </td></tr>
+    <tr><td class="paramname">block</td><td>是否等待夹爪完全到位 </td></tr>
+    <tr><td class="paramname">force</td><td>设定抓取力(0,100] </td></tr>
+    <tr><td class="paramname">speed</td><td>设定开合速度(0,100] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9e4a4f4c57e6a31e22d1ed1df04dc07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e4a4f4c57e6a31e22d1ed1df04dc07">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::Init </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化UR5e和夹爪,包括启动电源,释放制动器,加载远程控制程序(该函数要求UR5e处于远程控制模式) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>用于指定加载哪个程序,目前只需要加载"remote_control.urp\n" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af00d9dc758ea7b9c6be95eddb8a92c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00d9dc758ea7b9c6be95eddb8a92c4a">&#9670;&nbsp;</a></span>InsertPoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ur5e_action::InsertPoses </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据给定的路径点序列插入路径点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>待插入的路径点序列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否插入了路径点 </dd></dl>
+
+</div>
+</div>
+<a id="adb35064d8869e2748113ab66c4c864fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb35064d8869e2748113ab66c4c864fa">&#9670;&nbsp;</a></span>JsonPub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::JsonPub </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>msgs</em> = <code>{&quot;YES&quot;,&#160;&quot;&quot;}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>relocation_err</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>exception_bottle</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rack_absnum</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>操作状态反馈,向上位机发布/obsOperation_out话题 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msgs</td><td>包含IsDone和Exception </td></tr>
+    <tr><td class="paramname">relocation_err</td><td>底盘定位误差{位置x,y,z,姿态x,y,z,w} </td></tr>
+    <tr><td class="paramname">exception_bottle</td><td>试管架中没有试管的位置,若Exception为"bottle_not_all",则该参数非空(暂未使用) </td></tr>
+    <tr><td class="paramname">rack_absnum</td><td>启动区扫码完成后,发送试管架绝对编号(暂未使用) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd89dc36c944310cddfde5b7faa018f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd89dc36c944310cddfde5b7faa018f5">&#9670;&nbsp;</a></span>LoadStationInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::LoadStationInfo </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>station_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>载入特定站点的结构化信息（关节角和位姿）(注意：该函数只在机械臂复位后才会调用，所以需要在站点操作前发送复位指令) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">station_name</td><td>需要载入的站点名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11c20bb95f0c5b4519d9329f5d93837c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c20bb95f0c5b4519d9329f5d93837c">&#9670;&nbsp;</a></span>MoveCircle_pilz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::MoveCircle_pilz </td>
+          <td>(</td>
+          <td class="paramtype">CirType&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>goal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>机械臂末端在工作空间中沿圆弧轨迹运动，需要指定圆心或中间点(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>指定圆弧的类型。CENTER：指定圆心，则会在起点和目标之间按照较短的弧运动；INTERIM：指定中间点，则圆弧轨迹会经过指定的中间点 </td></tr>
+    <tr><td class="paramname">name</td><td>圆弧的圆心名称或中间点名称 </td></tr>
+    <tr><td class="paramname">goal</td><td>目标点名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75d3d8b2e789508f05b02fdf18a98189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d3d8b2e789508f05b02fdf18a98189">&#9670;&nbsp;</a></span>MoveLine_pilz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::MoveLine_pilz </td>
+          <td>(</td>
+          <td class="paramtype">Movetowards&#160;</td>
+          <td class="paramname"><em>towards</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed_factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>机械臂末端在工作空间中沿直线轨迹移动，会在起点和目标之间按照一条直线运动 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">towards</td><td>移动方向 </td></tr>
+    <tr><td class="paramname">dis</td><td>移动距离(m) </td></tr>
+    <tr><td class="paramname">speed_factor</td><td>移动速度缩放系数(0,1] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9f9d10f9ca890e1f2df1f17d8a277da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f9d10f9ca890e1f2df1f17d8a277da">&#9670;&nbsp;</a></span>RecordCurrSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::RecordCurrSequence </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>planner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>记录当前位置到下一位置的轨迹规划信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>当前执行轨迹的速度 </td></tr>
+    <tr><td class="paramname">acc</td><td>当前执行轨迹的加速度 </td></tr>
+    <tr><td class="paramname">planner</td><td>当前执行轨迹的规划器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9bdae6b6f7056962d063ad6566cadfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bdae6b6f7056962d063ad6566cadfa">&#9670;&nbsp;</a></span>RecordSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::RecordSequence </td>
+          <td>(</td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>V_planner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>记录上一次轨迹规划的信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>下一个目标路径点的索引 </td></tr>
+    <tr><td class="paramname">V_name</td><td>当前执行轨迹的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>当前执行轨迹的混合半径 </td></tr>
+    <tr><td class="paramname">V_speed</td><td>当前执行轨迹的速度 </td></tr>
+    <tr><td class="paramname">V_acc</td><td>当前执行轨迹的加速度 </td></tr>
+    <tr><td class="paramname">V_planner</td><td>当前执行轨迹的规划器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4cadcab5026f74ef0b1c191b02b1fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cadcab5026f74ef0b1c191b02b1fd0">&#9670;&nbsp;</a></span>ResetArm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::ResetArm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异常情况下复位机械臂。该函数会倒序执行存储的路径点和夹爪操作，直到末端没有夹持物体且到达安全位置。若在恢复过程中出现异常，会停止运动并杀死机械臂节点。此时需要人工介入。 </p>
+
+</div>
+</div>
+<a id="a5e40f668e7f1cf9372a4956fe0a89402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e40f668e7f1cf9372a4956fe0a89402">&#9670;&nbsp;</a></span>SaveMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SaveMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>站点信息记录中的Save模式,此模式下输入名称会调用SaveStationJoint()或SaveStationPose()来保存信息至对应json文件.(TODO) </p>
+
+</div>
+</div>
+<a id="a378c814e03cda04dadcf83264b0623f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378c814e03cda04dadcf83264b0623f8">&#9670;&nbsp;</a></span>SaveStationInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SaveStationInfo </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>station</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isJoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>站点信息记录主函数,包含Save模式和Go模式(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">station</td><td>站点名称 </td></tr>
+    <tr><td class="paramname">isJoint</td><td>选择记录关节角还是位姿 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11caa08f40143a24344b3983d72876be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11caa08f40143a24344b3983d72876be">&#9670;&nbsp;</a></span>SaveStationJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SaveStationJoint </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>joints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>记录当前关节角到对应json文件中(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>需要写入的json文件路径 </td></tr>
+    <tr><td class="paramname">name</td><td>关节角名称 </td></tr>
+    <tr><td class="paramname">joints</td><td>关节角数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2dc61569bcccae269d7bbb5f7a88031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2dc61569bcccae269d7bbb5f7a88031">&#9670;&nbsp;</a></span>SaveStationPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SaveStationPose </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3d&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaterniond&#160;</td>
+          <td class="paramname"><em>Q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>记录当前位姿到对应json文件中(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>需要写入的json文件路径 </td></tr>
+    <tr><td class="paramname">name</td><td>位姿名称 </td></tr>
+    <tr><td class="paramname">X</td><td>位姿平移 </td></tr>
+    <tr><td class="paramname">Q</td><td>位姿旋转四元数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93700c0ac3dfaff311bf7dfa0df177b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93700c0ac3dfaff311bf7dfa0df177b0">&#9670;&nbsp;</a></span>SequenceMove_pilz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SequenceMove_pilz </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_planner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>validate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>record</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据设定的操作进行移动 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>需要经过的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>指定每个路点的融合半径系数(0,1)(最后一个路径点必须为0)。如下图所示,真实融合半径=融合半径系数*min(||Pm-1Pm||,||PmPm+1||) <div class="image">
+<img src="../../blend.png" alt=""/>
+<div class="caption">
+平滑过渡段示意图</div></div>
+ </td></tr>
+    <tr><td class="paramname">V_speed</td><td>指定每个路点的速度缩放系数(0,1]。实际运动速度=速度缩放系数*最大运动速度 </td></tr>
+    <tr><td class="paramname">V_acc</td><td>指定每个路点的加速度缩放系数(0,1]。实际运动加速度=加速度缩放系数*最大运动加速度 </td></tr>
+    <tr><td class="paramname">V_planner</td><td>指定每个路点的规划器(PTP,LIN)。PTP为点到点规划，LIN为直线规划 </td></tr>
+    <tr><td class="paramname">validate</td><td>是否只是验证该轨迹可行（该参数已被抛弃） </td></tr>
+    <tr><td class="paramname">record</td><td>是否实时记录末端到达了哪个路径点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36ab23887ca5db426913b25f10089dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ab23887ca5db426913b25f10089dc5">&#9670;&nbsp;</a></span>SequenceMove_pilz() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SequenceMove_pilz </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_planner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>validate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>record</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>speedprofile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据设定的操作进行移动(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>需要经过的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>指定每个路点的融合半径系数(0,1)(最后一个路径点必须为0)。如下图所示,真实融合半径=融合半径系数*min(||Pm-1Pm||,||PmPm+1||) <div class="image">
+<img src="../../blend.png" alt=""/>
+<div class="caption">
+平滑过渡段示意图</div></div>
+ </td></tr>
+    <tr><td class="paramname">V_speed</td><td>指定每个路点的速度缩放系数(0,1]。实际运动速度=速度缩放系数*最大运动速度 </td></tr>
+    <tr><td class="paramname">V_acc</td><td>指定每个路点的加速度缩放系数(0,1]。实际运动加速度=加速度缩放系数*最大运动加速度 </td></tr>
+    <tr><td class="paramname">V_planner</td><td>指定每个路点的规划器(PTP,LIN,CRIC)。PTP为点到点轨迹规划，LIN为直线轨迹规划，CIRC为圆弧轨迹规划 </td></tr>
+    <tr><td class="paramname">validate</td><td>是否只是验证该轨迹可行（该参数已被抛弃） </td></tr>
+    <tr><td class="paramname">record</td><td>是否实时记录末端到达了哪个路径点 </td></tr>
+    <tr><td class="paramname">speedprofile</td><td>选择速度轮廓曲线(trap,doubleS)。trap为梯形速度规划，doubleS为双S形速度规划 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b329f760419d9004ae5d8119b64bcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b329f760419d9004ae5d8119b64bcf9">&#9670;&nbsp;</a></span>SequenceValidate_pilz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SequenceValidate_pilz </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; vector&lt; string &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; double &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; double &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; double &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; vector&lt; string &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>V_planner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>验证给定的多个操作是否可行 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>多个需要经过的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>多个路点的融合半径系数(0,1)(最后一个路径点必须为0) </td></tr>
+    <tr><td class="paramname">V_speed</td><td>多个路点的速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_acc</td><td>多个路点的加速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_planner</td><td>多个路点的规划器(PTP,LIN) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9cf1c33ea233f87a17bba5d10c6a89af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf1c33ea233f87a17bba5d10c6a89af">&#9670;&nbsp;</a></span>setAvgCartesianSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::setAvgCartesianSpeed </td>
+          <td>(</td>
+          <td class="paramtype">moveit::planning_interface::MoveGroupInterface::Plan &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>end_effector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设定笛卡尔轨迹的末端速度,已弃用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plan</td><td>需要设定速度的plan </td></tr>
+    <tr><td class="paramname">end_effector</td><td>指定末端link </td></tr>
+    <tr><td class="paramname">speed</td><td>设定的末端速度(m/s) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a5c88e72caca35acae5b20528972c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5c88e72caca35acae5b20528972c47">&#9670;&nbsp;</a></span>SwitchMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ur5e_action::SwitchMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于切换模式(TODO) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>0为Save模式(默认),1为Go模式. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add23fff627124eee583cb8e18ebcfb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add23fff627124eee583cb8e18ebcfb35">&#9670;&nbsp;</a></span>ValidateOneReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t ur5e_action::ValidateOneReq </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_planner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>验证给定的单个操作是否可行(该操作在必要时会插入路径点) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V_name</td><td>需要经过的路点名称 </td></tr>
+    <tr><td class="paramname">V_radius</td><td>每个路点的融合半径系数(0,1)(最后一个路径点必须为0) </td></tr>
+    <tr><td class="paramname">V_speed</td><td>每个路点的速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_acc</td><td>每个路点的加速度系数(0,1] </td></tr>
+    <tr><td class="paramname">V_planner</td><td>每个路点的规划器(PTP,LIN) </td></tr>
+    <tr><td class="paramname">validate</td><td>是否仅验证该操作是否可行 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="accbd5fe90ea2b7b0eb08a344656f3159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbd5fe90ea2b7b0eb08a344656f3159">&#9670;&nbsp;</a></span>_CTF_pose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::Pose ur5e_action::_CTF_pose</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>离心机标签位姿 </p>
+
+</div>
+</div>
+<a id="a6e884c93bc8e326b2e6038bb928acfcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e884c93bc8e326b2e6038bb928acfcd">&#9670;&nbsp;</a></span>_curr_station</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ur5e_action::_curr_station</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>机器人当前站点 </p>
+
+</div>
+</div>
+<a id="aad5e154581680c4aed973b938d526268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5e154581680c4aed973b938d526268">&#9670;&nbsp;</a></span>_dbptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="../../d1/d35/classdashboardsrv__client.html">dashboardsrv_client</a>&gt; ur5e_action::_dbptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UR5e的dashboard客户端,用于远程启动UR5e,加载远程控制程序 </p>
+
+</div>
+</div>
+<a id="a0db5fcc23978e2575473fb765388f202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db5fcc23978e2575473fb765388f202">&#9670;&nbsp;</a></span>_file_root</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ur5e_action::_file_root</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>存放站点位姿信息文件的路径 </p>
+
+</div>
+</div>
+<a id="a15648fe2df899f073a9787865dea8e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15648fe2df899f073a9787865dea8e0d">&#9670;&nbsp;</a></span>_mgptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">moveit::planning_interface::MoveGroupInterfacePtr ur5e_action::_mgptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moveit movegroup 指针 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../dc/d9a/motion__planning_8h_source.html">motion_planning.h</a></li>
+<li>motion_planning.cpp</li>
+<li>motion_planning_util.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

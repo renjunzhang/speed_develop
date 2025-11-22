@@ -1,0 +1,81 @@
+{
+    "cmd": [
+        {
+            "name": "getdripper",
+            "scripts": [
+                "J robot_set_dripper_0 0 0.15 0.1 PTP",
+                "SL 700",
+                "J robot_set_dripper_4 0.2 0.15 0.1 LIN",
+                "DO 0 on",
+                "W 1",
+                "J robot_set_dripper_3 0 0.05 0.1 LIN",
+                "DO 0 off",
+                "W 1",
+                "J robot_set_dripper_2 0 0.05 0.1 LIN",
+                "J robot_set_dripper_1 0 0.05 0.1 LIN",
+                "J robot_set_dripper_0 0 0.15 0.1 PTP"
+            ]
+        },
+        {
+            "name": "getgripper",
+            "scripts": [
+                "J robot_set_gripper_0 0 0.15 0.1 PTP",
+                "SL 700",
+                "J robot_set_gripper_3 0.2 0.15 0.1 LIN",
+                "DO 0 on",
+                "W 1",
+                "J robot_set_gripper_2 0 0.1 0.1 LIN",
+                "DO 0 off",
+                "W 1",
+                "J robot_set_gripper_1 0.2 0.15 0.1 LIN",
+                "J robot_set_gripper_0 0 0.15 0.1 LIN"
+            ]
+        },
+        {
+            "name": "setdripper",
+            "scripts": [
+                "DP reset",
+                "J robot_set_dripper_0 0 0.15 0.1 PTP",
+                "SL 700",
+                "J robot_set_dripper_1 0.2 0.15 0.1 LIN",
+                "J robot_set_dripper_2 0 0.1 0.1 LIN",
+                "J robot_set_dripper_3 0 0.1 0.1 LIN",
+                "DO 0 on",
+                "W 1",
+                "J robot_set_dripper_4 0 0.15 0.1 LIN",
+                "DO 0 off",
+                "J robot_set_dripper_0 0 0.15 0.1 LIN"
+            ]
+        },
+        {
+            "name": "setgripper",
+            "scripts": [
+                "G 0 false true 20 50",
+                "J robot_set_gripper_0 0 0.15 0.1 PTP",
+                "SL 700",
+                "J robot_set_gripper_1 0.2 0.15 0.1 LIN",
+                "J robot_set_gripper_2 0 0.1 0.1 LIN",
+                "DO 0 on",
+                "W 1",
+                "J robot_set_gripper_3 0 0.1 0.1 LIN",
+                "DO 0 off",
+                "J robot_set_gripper_0 0 0.15 0.1 LIN"
+            ]
+        }
+    ],
+    "cmd_to_pointname": [
+    ],
+    "joints": [
+    ],
+    "marker": {
+        "id": 0,
+        "size": [
+            0,
+            0
+        ]
+    },
+    "marker2base": [
+    ],
+    "poses": [
+    ]
+}
