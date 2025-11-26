@@ -1,0 +1,14 @@
+{
+    "comment": "站点坐标配置文件 - 用于验证机器人是否到达指定站点",
+    "tolerance": 50,
+    "comment_tolerance": "坐标容差范围（毫米），默认50mm",
+    "dir_tolerance": 5,
+    "comment_dir_tolerance": "姿态容差范围（度），默认±5度",
+    "stations": {
+        "charge_station": {
+            "posX": "0.0",
+            "posY": "0.0",
+            "robotDir": "0"
+        }
+    }
+}

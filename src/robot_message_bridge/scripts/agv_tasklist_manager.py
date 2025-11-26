@@ -69,7 +69,7 @@ class AgvTaskListManager:
         else:
             mapping_destination = "E0"
         requests = {
-            "reqCode":f"pubtask_{current_time}", # RCS-2000
+            "reqCode":f"pubtask1_{current_time}", # RCS-2000
             "taskTyp": str(self.Task_typ),   # 任务类型,与RCS-lite设置的任务类型一样（移动）
             #"wbCode": mapping_destination,     # 工作位
             # "positionCodePath": [{
@@ -84,32 +84,6 @@ class AgvTaskListManager:
         }
         jrequests = json.dumps(requests)
         print(jrequests)
-        return jrequests
-    
-
-    #生成充电任务单
-    def ChargeTask(self):
-        current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        requests = {
-            "mapCode": str(self.MAP_name),
-            "operator": "1",   # 固定1，表示执行充电
-            "reqCode": f"charge_{current_time}",
-            "agvCode": str(self.AGV_name),
-            "robotCode": str(self.AGV_name)
-        }
-        jrequests = json.dumps(requests)
-        print(jrequests)
-        return jrequests
-
-    # 释放机器人
-    def FreeRobotTask(self):
-        current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        requests = {
-            "reqCode":f"free_{current_time}",               
-            "robotCode":str(self.AGV_name)
-        }
-        jrequests = json.dumps(requests)
-        print(f"释放机器人请求JSON: {jrequests}")
         return jrequests
     
     def ContinueTask(self):
@@ -128,4 +102,48 @@ class AgvTaskListManager:
         else:
             return "NG"
         
+    #释放底盘
+    def FreeRobot(self):
+        current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
+        requests = {
+            "reqCode":f"pubtask2_{current_time}", # RCS-2000
+            "robotCode": str(self.AGV_name)
+        }
+        jrequests = json.dumps(requests)
+        print(jrequests)
+        return jrequests
+    
+    #主动调用充电接口
+    def GoCharge(self):
+        current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        requests = {
+            "mapCode":str(self.MAP_name), # RCS-2000
+            "mapShortName":"",
+            "needReqCode":"",
+            "operator": 1,
+            "reqCode":f"gocharge_{current_time}", # RCS-2000
+            "reqTime":"",
+            "robotCode": str(self.AGV_name),
+            "uname":""
+        }
+        jrequests = json.dumps(requests)
+        print(jrequests)
+        return jrequests
+    
+    #主动取消充电接口
+    def UnCharge(self):
+        current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+        requests = {
+            "mapCode":str(self.MAP_name), # RCS-2000
+            "mapShortName":"",
+            "needReqCode":"",
+            "operator": 0,
+            "reqCode":f"uncharge_{current_time}", # RCS-2000
+            "reqTime":"",
+            "robotCode": str(self.AGV_name),
+            "uname":""
+        }
+        jrequests = json.dumps(requests)
+        print(jrequests)
+        return jrequests

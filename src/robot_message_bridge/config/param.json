@@ -9,5 +9,9 @@
   "AGV_url2": "http://192.168.200.157:8182/rcms-dps/rest/",
   "Uncharge_Park": "CHARGE1",
   "map":"RJ",
-  "taskTyp":"ZKD"
+  "taskTyp":"ZKD",
+  "minimum_battery_threshold": 50,
+  "medium_battery_threshold": 70,
+  "high_battery_threshold": 90,
+  "idle_time_before_charge": 600
 }
