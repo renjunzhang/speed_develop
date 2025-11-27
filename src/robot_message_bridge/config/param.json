@@ -12,6 +12,7 @@
   "taskTyp":"ZKD",
   "minimum_battery_threshold": 50,
   "medium_battery_threshold": 70,
-  "high_battery_threshold": 90,
-  "idle_time_before_charge": 600
+  "high_battery_threshold": 92,
+  "idle_time_before_charge": 60,
+  "charge_complete_waiting_point": "waiting_station"
 }

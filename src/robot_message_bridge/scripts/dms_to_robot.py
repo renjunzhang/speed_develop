@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""
-重构版本的 dms_to_robot.py
-主要改进：
-1. 消除 dms_callback 中的冗余嵌套（547行、568行的if完全多余）
-2. 使用早返回模式替代深层嵌套
-3. 提取辅助方法减少重复代码
-4. 保持功能完全等效
-"""
+
 import json
 import os
 import rospy
@@ -176,6 +169,7 @@ class RobotMsgManager:
         # 充电管理状态变量
         self.last_task_time = time.time()  # 上次任务完成时间
         self.is_in_low_battery_mode = False  # 是否处于低电量模式
+        self.is_charging_to_full = False  # 是否正在充电且等待充满
         self.charge_command_sent_time = None  # 发送充电命令的时间
         self.charge_retry_count = 0  # 充电重试次数
         self.max_charge_retries = 3  # 最大充电重试次数
@@ -560,11 +554,6 @@ class RobotMsgManager:
         """
         需要导航后执行操作
 
-        重构说明：
-        - 原代码547行的 `if state == "done"` 是冗余的（535行已经return了非done情况）
-        - 原代码568行的 `if pubflag` 是冗余的（560行已经return了False情况）
-        - 使用早返回模式替代深层嵌套
-
         返回:
             bool: 是否成功
         """
@@ -582,8 +571,6 @@ class RobotMsgManager:
             return False
 
         # ===== 步骤2: 发布导航任务 =====
-        # 注意：原代码547行的 if state == "done" 在这里是冗余的
-        # 因为上面 _execute_arm_reset 失败时已经return了
         logger.info("2. 底盘移动")
         logger.info(f"oper state: {self.oper_topic_feedback_msg['state']}")
 
@@ -595,8 +582,6 @@ class RobotMsgManager:
             self._set_error_and_return(f"发布导航任务失败，已重试{self.MAX_NAV_PUB_RETRIES}次", "navi")
             return False
 
-        # 注意：原代码568行的 if pubflag 在这里是冗余的
-        # 因为上面 not pubflag 时已经return了
         logger.info(f"@本地时间:{localtime} 发布: 移动至站点: {cur_destination}任务成功")
 
         # ===== 步骤3: 等待导航完成 =====
@@ -730,7 +715,6 @@ class RobotMsgManager:
         2. 提取单个操作处理逻辑到 _process_single_operation
         3. 提取原地执行逻辑到 _execute_operation_in_place
         4. 提取导航执行逻辑到 _execute_operation_with_navigation
-        5. 消除冗余的嵌套if（原547行和568行）
         """
         with self.callback_fun_mutex:
             logger.info("接收到DMS信息")
@@ -940,33 +924,42 @@ class RobotMsgManager:
             logger.info("主动调用充电接口成功")
             return True, dresp
 
-    #取消充电
+    # #取消充电
+    # def PubAgvUnChargeTask(self):
+    #     jreq = self.agvlist.UnCharge()
+    #     try:
+    #         resp = requests.post(
+    #             self.AGV_url + "agvChargeTask",
+    #             jreq.encode("utf-8"),
+    #             headers=self.headers,
+    #             timeout=(60, 15)
+    #         )
+    #     except Exception as e:
+    #         logger.error(f"调用取消充电接口异常: {e}")
+    #         return False, None
+
+    #     try:
+    #         dresp = json.loads(resp.text)
+    #     except Exception as e:
+    #         logger.error(f"解析取消充电接口响应失败: {e}")
+    #         return False, None
+
+    #     task = self.agvlist.CheckTaskFeedback(dresp)
+    #     if task != "OK":
+    #         logger.info("调用取消充电接口失败:\n" + task)
+    #         return False, dresp
+    #     else:
+    #         logger.info("调用取消充电接口成功")
+    #         return True, dresp
+
     def PubAgvUnChargeTask(self):
-        jreq = self.agvlist.UnCharge()
-        try:
-            resp = requests.post(
-                self.AGV_url + "agvChargeTask",
-                jreq.encode("utf-8"),
-                headers=self.headers,
-                timeout=(60, 15)
-            )
-        except Exception as e:
-            logger.error(f"调用取消充电接口异常: {e}")
-            return False, None
-
-        try:
-            dresp = json.loads(resp.text)
-        except Exception as e:
-            logger.error(f"解析取消充电接口响应失败: {e}")
-            return False, None
-
-        task = self.agvlist.CheckTaskFeedback(dresp)
-        if task != "OK":
-            logger.info("调用取消充电接口失败:\n" + task)
-            return False, dresp
-        else:
-            logger.info("调用取消充电接口成功")
-            return True, dresp
+        """
+        取消充电：通过移动到等待点实现
+        原 RCS 取消充电 API 不可用，改为移动到指定等待点
+        """
+        waiting_point = self.config_param.get("charge_complete_waiting_point", "waiting_station")
+        logger.info(f"取消充电：移动到等待点 {waiting_point}")
+        return self.PubAgvTask("move", waiting_point)
 
     def TaskPeriod(self, feedback_msg, waitime=60):
         accept = False
@@ -1118,7 +1111,7 @@ class RobotMsgManager:
             )
 
         except Exception as e:
-            logger.warning("invoke navi_serve_callback exception!")
+            logger.warning(f"navi_serve_callback网络请求异常: {e}")
             return None
 
         raw_info = {}
@@ -1265,12 +1258,14 @@ class RobotMsgManager:
             if is_charging:
                 self.charge_command_sent_time = None
                 self.charge_retry_count = 0
+                self.is_charging_to_full = True  # 标记：充电中，等待充满
             elif not is_busy and idle_time > self.idle_time_before_charge:
                 if self.charge_command_sent_time is None:
                     logger.info(f"中电量模式：电量{current_battery}%，空闲{idle_time:.0f}秒，触发充电")
                     success, _ = self.PubAgvChargeTask()
                     if success:
                         self.charge_command_sent_time = current_time
+                        self.is_charging_to_full = True  # 标记：充电中，等待充满
                 else:
                     elapsed = current_time - self.charge_command_sent_time
                     if elapsed > self.charge_wait_timeout:
@@ -1286,20 +1281,44 @@ class RobotMsgManager:
                             logger.warning(f"中电量充电重试达上限，放弃本次充电")
                             self.charge_command_sent_time = None
                             self.charge_retry_count = 0
+                            self.is_charging_to_full = False
             else:
                 if is_busy and self.charge_command_sent_time is not None:
                     logger.info("检测到任务执行中，取消之前的充电命令")
                     self.PubAgvUnChargeTask()
                     self.charge_command_sent_time = None
                     self.charge_retry_count = 0
+                    self.is_charging_to_full = False
 
+        # 第3档：高电量（>=high）- 根据情况决定是否取消充电
         else:
+            self.is_in_low_battery_mode = False
+            
             if is_charging:
-                logger.info(f"高电量模式：电量{current_battery}%已充足，取消充电")
-                self.PubAgvUnChargeTask()
+                # 正在充电中
+                if is_busy:
+                    # 有任务要执行，立即取消充电
+                    logger.info(f"高电量模式：电量{current_battery}%，有任务需要执行，取消充电")
+                    self.PubAgvUnChargeTask()
+                    self.is_charging_to_full = False
+                elif current_battery >= 100:
+                    # 已充满100%，取消充电
+                    logger.info(f"高电量模式：电量已充满{current_battery}%，取消充电")
+                    self.PubAgvUnChargeTask()
+                    self.is_charging_to_full = False
+                elif self.is_charging_to_full:
+                    # 正在充电且标记为充满模式，继续充电不取消
+                    pass  # 什么都不做，让它继续充电
+                else:
+                    # 其他情况（比如手动在充电桩上），不干预
+                    pass
+            else:
+                # 不在充电状态，重置标记
+                self.is_charging_to_full = False
+            
+            # 重置充电命令状态
             self.charge_command_sent_time = None
             self.charge_retry_count = 0
-            self.is_in_low_battery_mode = False
 
     def robot_msg_gen(self, navi, oper):
         self.robot_msg["current_workstation"] = self.now_workstation
@@ -1639,7 +1658,3 @@ if __name__ == "__main__":
 
     except:
         logger.critical(str(traceback.format_exc()))
-
-
-
-

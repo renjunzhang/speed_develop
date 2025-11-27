@@ -6,8 +6,23 @@
     "comment_dir_tolerance": "姿态容差范围（度），默认±5度",
     "stations": {
         "charge_station": {
-            "posX": "0.0",
-            "posY": "0.0",
+            "posX": "77892",
+            "posY": "39748",
+            "robotDir": "90"
+        },
+        "elec_chem_storage_workstation_306": {
+            "posX": "77069",
+            "posY": "45562",
+            "robotDir": "180"
+        },
+        "microplate_reader_bio_chem": {
+            "posX": "14212",
+            "posY": "39505",
+            "robotDir": "90"
+        },
+        "waiting_station": {
+            "posX": "77898",
+            "posY": "41000",
             "robotDir": "0"
         }
     }
