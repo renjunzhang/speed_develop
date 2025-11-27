@@ -952,14 +952,33 @@ class RobotMsgManager:
     #         logger.info("调用取消充电接口成功")
     #         return True, dresp
 
+    # def PubAgvUnChargeTask(self):
+    #     """
+    #     取消充电：通过移动到等待点实现
+    #     原 RCS 取消充电 API 不可用，改为移动到指定等待点
+    #     """
+    #     waiting_point = self.config_param.get("charge_complete_waiting_point", "waiting_station")
+    #     logger.info(f"取消充电：移动到等待点 {waiting_point}")
+    #     return self.PubAgvTask("move", waiting_point)
+    
     def PubAgvUnChargeTask(self):
         """
         取消充电：通过移动到等待点实现
         原 RCS 取消充电 API 不可用，改为移动到指定等待点
         """
         waiting_point = self.config_param.get("charge_complete_waiting_point", "waiting_station")
-        logger.info(f"取消充电：移动到等待点 {waiting_point}")
-        return self.PubAgvTask("move", waiting_point)
+        logger.info(f"取消充电：尝试通过移动到等待点 {waiting_point} 来实现")
+
+        # 调用移动任务函数，并获取其返回值
+        success, response = self.PubAgvTask("move", waiting_point)
+
+        # 对返回值进行判断和记录
+        if success:
+            logger.info("成功发布“移动到等待点”任务以取消充电")
+            return True, response
+        else:
+            logger.error(f"尝试通过移动来取消充电失败，RCS返回: {response}")
+            return False, response
 
     def TaskPeriod(self, feedback_msg, waitime=60):
         accept = False
